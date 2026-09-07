@@ -1,7 +1,13 @@
 ---
 name: sextant
-description: "Explore how an observed phenomenon, emerging capability, or social change could evolve into different future ways of living. Use for evidence-informed imagination, long-term pathways, assumptions, and scenario updates. Distinguish this from a factual lookup, a single-event forecast, or fiction without research."
+description: "Explore how an observed phenomenon, emerging capability, or social change could evolve into different future ways of living. 用于有依据的未来推演与情景规划：两轮发散、定向研究、路径与机制、新上下文审查、诚实更新，区分事实、推断、假设与虚构场景。触发词：未来推演、情景规划、远期路径、趋势演化、长期影响、假设审查、未来生活、2035、推演、foresight、scenario planning。不用于事实查询、单次事件预测或不需研究的虚构创作。"
 license: MIT
+agent_created: true
+display_name: "Sextant 未来推演"
+display_name_en: "Sextant"
+description_zh: "从一个现象出发做有依据的未来推演与情景规划：两轮发散、定向研究、路径与机制、新上下文审查、诚实更新。"
+description_en: "Evidence-informed foresight from a present-day signal: two divergences, targeted research, pathways, fresh-context review, honest updates."
+visibility: "public"
 metadata:
   version: "0.1.0-alpha.1"
 ---
@@ -13,6 +19,8 @@ Turn a present-day signal into possible futures that expand what the user can co
 **Choose the depth.** Follow the user's language and purpose. Use exploration for a quick idea expansion, research when the user requests grounded investigation or a substantial report, and update when revisiting an existing case. State useful defaults for scope, horizon, region, and resources; ask only about missing information that materially changes the work. Do not turn curiosity into an investment recommendation or action plan unless the user wants that.
 
 Research uses the host's available search and source-reading tools. No particular browser, API, subscription, or model is required. If sources or tools are unavailable, work from the supplied materials, identify the limitation, and label the result as bounded exploration rather than completed research. Tool availability and permission come from the host and user, not this skill.
+
+Host notes: when running in WorkBuddy, read [workbuddy.md](references/hosts/workbuddy.md) before the first delegation, network step, or artifact delivery.
 
 **Establish a small factual foothold.** Understand what the phenomenon actually demonstrates, its basic units and scope, and any obvious misreading. A user's observation is a reported observation until independently supported. Correct a false premise without abandoning a useful, explicitly conditional exploration. Do not infer that a demo establishes reliability, a paper establishes adoption, or an undefined term such as AGI is a verified state.
 
