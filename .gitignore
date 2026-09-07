@@ -17,6 +17,7 @@ Thumbs.db
 *.key
 *.p12
 .claude/settings.local.json
+.workbuddy/
 
 # Environments, caches, and build outputs belong outside cloud worktrees
 .venv/
