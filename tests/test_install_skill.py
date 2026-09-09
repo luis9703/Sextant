@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import subprocess
+import json
+import shutil
 import sys
 import tempfile
 import unittest
@@ -110,6 +112,66 @@ class InstallSkillTests(unittest.TestCase):
         result = run_installer()
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("--to", result.stderr)
+
+    def test_rejects_destination_inside_source(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = make_source(Path(tmp) / "src")
+            destination = source / "nested"
+            for extra in ((), ("--dry-run",)):
+                result = run_installer("--source", str(source), "--to", str(destination), *extra)
+                self.assertEqual(result.returncode, 1)
+                self.assertFalse(destination.exists())
+
+    def test_rejects_nested_symlinks_before_copying(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = make_source(Path(tmp) / "src")
+            external = Path(tmp) / "external.txt"
+            external.write_text("outside the package")
+            (source / "external.txt").symlink_to(external)
+            destination = Path(tmp) / "installed"
+            result = run_installer("--source", str(source), "--to", str(destination))
+            self.assertEqual(result.returncode, 3)
+            self.assertFalse(destination.exists())
+
+    def test_workbuddy_overlay_keeps_body_and_portable_source_unchanged(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            before = (REAL_SKILL / "SKILL.md").read_bytes()
+            destination = Path(tmp) / "installed"
+            result = run_installer("--to", str(destination), "--host", "workbuddy")
+            self.assertEqual(result.returncode, 0, result.stderr)
+            actual = (destination / "sextant/SKILL.md").read_text()
+            self.assertIn("agent_created: true", actual)
+            self.assertIn('visibility: "public"', actual)
+            self.assertEqual(actual.split("\n---\n", 1)[1], before.decode().split("\n---\n", 1)[1])
+            self.assertEqual(before, (REAL_SKILL / "SKILL.md").read_bytes())
+            self.assertNotIn("\nagent_created:", before.decode())
+
+    def test_invalid_overlay_fails_before_destination_creation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / "sextant"
+            shutil.copytree(REAL_SKILL, source)
+            (source / "agents/workbuddy.json").write_text(json.dumps({"name": "unexpected"}))
+            destination = Path(tmp) / "installed"
+            result = run_installer("--source", str(source), "--to", str(destination), "--host", "workbuddy")
+            self.assertEqual(result.returncode, 3)
+            self.assertFalse(destination.exists())
+
+    def test_workbuddy_dry_run_does_not_write(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "installed"
+            result = run_installer("--to", str(destination), "--host", "workbuddy", "--dry-run")
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("workbuddy", result.stdout)
+            self.assertFalse(destination.exists())
+
+    def test_destination_file_is_rejected_in_preview_and_install(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "file"
+            destination.write_text("preserve")
+            for extra in ((), ("--dry-run",)):
+                result = run_installer("--to", str(destination), *extra)
+                self.assertEqual(result.returncode, 1)
+                self.assertEqual(destination.read_text(), "preserve")
 
 
 if __name__ == "__main__":

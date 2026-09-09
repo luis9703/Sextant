@@ -145,5 +145,85 @@ class CheckProjectTests(unittest.TestCase):
             self.assertIn("missing exploration.md", result.stdout)
 
 
+    def test_remote_source_url_is_not_a_local_home_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            source = "https://example.org" + "/home" + "/index/news/123"
+            with (root / "README.md").open("a", encoding="utf-8") as handle:
+                handle.write(f"\n[Source]({source})\n")
+            self.assertEqual(run_check(root).returncode, 0)
+
+    def test_local_path_beside_remote_url_is_still_detected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            local = "/home" + "/someone/private/"
+            with (root / "README.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nhttps://example.org/source\n" + local + "\n")
+            result = run_check(root)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("Linux home path", result.stdout)
+
+    def test_local_path_in_url_query_is_still_detected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            local = "/Users" + "/someone/private/"
+            with (root / "README.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nhttps://example.org/debug?file=" + local + "\n")
+            result = run_check(root)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("macOS home path", result.stdout)
+
+    def test_secret_in_url_is_not_masked(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            token = "ghp_" + "A" * 30
+            with (root / "README.md").open("a", encoding="utf-8") as handle:
+                handle.write("\nhttps://example.org/" + token + "\n")
+            result = run_check(root)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("GitHub token", result.stdout)
+
+    def test_local_workbuddy_state_is_not_package_content(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            state = root / ".workbuddy" / "memory"
+            state.mkdir(parents=True)
+            local = "/home" + "/someone/private/"
+            (state / "notes.md").write_text(local)
+            self.assertEqual(run_check(root).returncode, 0)
+
+    def test_nonportable_frontmatter_and_duplicate_keys_fail(self) -> None:
+        for extra in ('agent_created: true\n', 'description: "duplicate"\n'):
+            with self.subTest(extra=extra), tempfile.TemporaryDirectory() as tmp:
+                root = make_repo(Path(tmp))
+                path = root / "skills/sextant/SKILL.md"
+                path.write_text(path.read_text().replace("---\nname:", "---\n" + extra + "name:", 1))
+                result = run_check(root)
+                self.assertEqual(result.returncode, 1, result.stdout)
+
+    def test_runtime_contract_version_drift_is_detected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            skill = root / "skills/sextant"
+            (skill / "scripts").mkdir()
+            (skill / "scripts/run_control.py").write_text("# synthetic fixture\n")
+            (skill / "assets").mkdir()
+            (skill / "assets/depth-profiles.json").write_text('{"contract_version":"different"}')
+            result = run_check(root)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("contract_version differs", result.stdout)
+
+    def test_installed_mit_license_must_match(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = make_repo(Path(tmp))
+            skill = root / "skills/sextant"
+            path = skill / "SKILL.md"
+            path.write_text(path.read_text().replace("---\nname:", "---\nlicense: MIT\nname:", 1))
+            (root / "LICENSE").write_text("license fixture")
+            self.assertEqual(run_check(root).returncode, 1)
+            (skill / "LICENSE").write_text("license fixture")
+            self.assertEqual(run_check(root).returncode, 0)
+
+
 if __name__ == "__main__":
     unittest.main()

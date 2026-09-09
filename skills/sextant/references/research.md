@@ -8,6 +8,10 @@ Prefer evidence proportional to the claim. A vendor may establish what it announ
 
 Keep conflicting findings and measurement differences visible. Costs need compatible quality, units, time, and scope before fitting a curve. A forecast from an expert is an opinion-based estimate, not a historical reference-class frequency. A model-generated explanation of the present is an inference, not a source.
 
+Before using a consequential number in a mechanism, name what it measures and check the unit, currency, period, denominator and source population. A fare is not a cost; revenue is not profit; a falling expenditure share need not mean lower waiting time or spare capacity. Keep a supported number distinct from an unsupported explanation for it. If a quantity is uncertain, carry that uncertainty into every dependent claim, use it explicitly as a scenario parameter, or remove it. A footnote cannot undo stronger prose.
+
+Source status remains local to the claim in all profiles, including brief. A numerical result from a narrow experiment cannot become a general capability, a vendor plan cannot become an operating policy, and an unverified percentage cannot silently become an established premise during recombination. Check accepted corrections again in the final draft.
+
 Review closest prior ideas after the initial divergence. State the search scope and describe overlap. Use bounded language such as “not covered by this baseline” or “no direct match found in this search,” rather than claiming no one has proposed it. Finding a precursor can improve the pathway without invalidating the usefulness of exploring it.
 
 Stop when unresolved questions are unlikely to change the material branches, or when resources are exhausted. Distinguish those reasons. Prioritize gaps that could replace the preferred mechanism, create a new branch, or change an observation plan. If access fails, use genuinely available evidence and narrow claims; never invent references or pretend the inaccessible source was read.

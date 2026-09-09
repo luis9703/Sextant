@@ -1,12 +1,12 @@
 # Sextant · Future pathway exploration
 
-[中文](README.md) · [Skill](skills/sextant/SKILL.md) · [Worked example](examples/ai-delegation-2035/report.md) · [Validation record](evals/results/2026-09-07.md)
+[中文](README.md) · [Skill](skills/sextant/SKILL.md) · [Worked example](examples/ai-delegation-2035/report.md) · [Release review](evals/results/2026-09-09-release-review.md)
 
 **Explore what today's signals could become—with imagination, evidence, and room to revise.**
 
 Sextant is an open Agent Skill for developing possible futures from emerging capabilities, papers, social changes, and observations. It explores assumptions, human desires, structural analogies, evolving institutions, and the conditions connecting them.
 
-Version **0.1.0-alpha.1** is an experimental, usable method prototype. It has not demonstrated superiority over ordinary model prompting, experts, or other foresight methods. It has no validated long-term forecasting record.
+Version **0.2.0-alpha.1** is an experimental, usable method prototype. It has not demonstrated superiority over ordinary model prompting, experts, or other foresight methods. It has no validated long-term forecasting record.
 
 Try a request such as:
 
@@ -33,13 +33,32 @@ For Claude Code's personal skill directory:
 python3 scripts/install_skill.py --to "$HOME/.claude/skills"
 ```
 
-The installer copies the full `sextant` folder and refuses to overwrite an existing installation. Add `--dry-run` to inspect the destination. You may also copy `skills/sextant/` manually into your host's configured skill directory. Review and preserve local customizations before replacing an old installation; automatic overwrite or merging is intentionally unsupported.
+For WorkBuddy with its existing display extensions:
+
+```sh
+python3 scripts/install_skill.py --to "$HOME/.workbuddy/skills" --host workbuddy
+```
+
+The canonical source uses portable frontmatter. `agents/workbuddy.json` is an overlay consumed by this project's installer, not a native WorkBuddy manifest. Only the installed WorkBuddy copy receives those extra fields; its method body remains identical. A symlink to canonical source does not apply the overlay. See the [host notes](skills/sextant/references/hosts/workbuddy.md); actual client loading and model behavior still require separate validation.
+
+The installer copies the full `sextant` folder, including its license, and refuses existing targets, destinations inside the source, and symlinks inside the package. Add `--dry-run` to inspect the destination. You may manually copy the portable unit. Preserve local customizations before replacing an old installation; automatic overwrite and merging are unsupported. Filesystem failures are reported explicitly, with any partial destination retained for inspection rather than silently overwritten on retry.
 
 These personal directories follow the current [Codex documentation](https://learn.chatgpt.com/docs/build-skills) and [Claude Code documentation](https://code.claude.com/docs/en/skills). Customized or older clients may use different locations. Invoke `$sextant` in Codex or `/sextant` in Claude Code, or explicitly ask the agent to use it. Follow the host's reload instructions if the skill does not appear. See the validation record for what has actually been tested; packaging compatibility is not a claim that every client has been verified.
 
-**Choose the depth.** Exploration produces a compact expansion with unverified premises labeled. Research produces a source-backed case with candidate revisions, conditions, review status, and signposts. Update revisits an existing case using new evidence while retaining earlier judgments. You can specify horizon, region, people, sources, and research budget.
+**Full depth is the default.** `deep` covers both divergences, research, developed pathways, grounding and creative review, reconciliation, and delivery. `extensive` adds independent candidate exploration and further branch work where useful. Select `brief` only for an explicit request for a short sketch, never merely because the user says “imagine.” Resource limits create an honestly partial run, not an unannounced downgrade. Updating a case retains the necessary depth and earlier judgments.
 
-Artifact-producing runs default to a new `sextant-runs/<case-id>/` with `exploration.md` and `report.md`. Personal runs are not automatically published. A monitoring proposal does not schedule a monitor. Scenario narratives need not be quantified forecasts.
+Deep runs use a new `sextant-runs/<case-id>/`, phase artifacts, `run-state.json`, and `report.md`. The packaged receipt helper checks recorded order, missing or changed artifacts, and partial phases. It does not establish truth, actual reviewer isolation, creativity, or compliance by a host that bypasses it. See the [execution contract](skills/sextant/references/execution.md). Earlier examples retain their historical format.
+
+The [resource profiles](skills/sextant/assets/depth-profiles.json) use provisional engineering targets of 50,000–100,000 run-wide tokens for deep and 100,000–200,000 for extensive. These ranges have not been validated as optimal. Edit them, set a profile target to null, or override them per run. A target is a planned envelope, not actual usage, a runtime cap or a minimum spend. Host telemetry is required for actual counters; unknown usage remains unknown. Spend extra capacity on different mechanisms, unfamiliar material, branch development and reconciliation rather than padding output.
+
+From the repository root, initialize a new case and inspect progress:
+
+```sh
+python3 -B skills/sextant/scripts/run_control.py init --run sextant-runs/my-case --topic "My future question" --budget-min 50000 --budget-max 100000
+python3 -B skills/sextant/scripts/run_control.py status --run sextant-runs/my-case
+```
+
+Personal runs are not automatically published. A monitoring proposal does not schedule a monitor. Scenario narratives need not be quantified forecasts. The protocol does not guarantee identical behavior across models; cross-host execution still needs validation.
 
 Explore the [worked case](examples/ai-delegation-2035/report.md), its [process record](examples/ai-delegation-2035/exploration.md), the [evaluation approach](evals/README.md), and [behavioral cases](evals/cases.md). The detailed [design](docs/01-product-and-architecture.md) and [research notes](docs/02-research-and-evaluation.md) are currently in Chinese, as are the evaluation guide, the behavioral cases, the validation record, and the worked example.
 
@@ -52,4 +71,4 @@ python3 -B scripts/check_project.py
 python3 -B -m unittest discover -s tests -v
 ```
 
-These checks cover packaging, local references, and installer behavior. They do not establish creativity, correct interpretation, or predictive accuracy. See the [validation record](evals/results/2026-09-07.md) for actual results and limitations.
+These checks cover packaging, local references, and installer behavior. They do not establish creativity, correct interpretation, or predictive accuracy. See the [release review](evals/results/2026-09-09-release-review.md) and the [partially completed behavioral validation](evals/results/2026-09-08-depth.md); the [initial record](evals/results/2026-09-07.md) is retained as history.

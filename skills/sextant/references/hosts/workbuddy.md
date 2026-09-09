@@ -4,9 +4,11 @@
 
 Read this file only when the current host is WorkBuddy. Signals: the session has `Agent` and `present_files` tools, or the skill was loaded from `~/.workbuddy/skills`.
 
-This file covers host-specific execution only. It changes no methodological requirement. Where anything here conflicts with `SKILL.md` or the three core files in `references/`, `SKILL.md` and those references win.
+This file covers host-specific execution only. Where it conflicts with `SKILL.md` or the execution and methodological references, those sources win. Default to full `deep` work even for “想象一下”; do not infer brief mode from that phrase or from switching models. Use the packaged phase helper through Bash when Python is available, and record unknown usage when WorkBuddy exposes no run-wide counters.
 
-## 1. Stage 6: fresh-context review
+The repository's canonical frontmatter is portable. To preserve WorkBuddy-only display and management fields, the repository installer supports `--host workbuddy`, reading [agents/workbuddy.json](../../agents/workbuddy.json) and adding its fields to the copied SKILL.md. That JSON is this project's installer configuration, not a native WorkBuddy manifest. The method body remains unchanged. A symlink to canonical source does not apply an install-time overlay; existing customized or symlinked installations must be reviewed and preserved before choosing copy installation. Do not mutate global installation or settings as a side effect of a foresight run. Overlay rendering is tested; actual WorkBuddy field interpretation and client behavior remain separate tests.
+
+## 1. Review phase: fresh-context review
 
 **Which tool.** Use the `Agent` tool with `subagent_type: general-purpose`.
 
@@ -30,6 +32,8 @@ Review request, reusable verbatim:
 > Identify and list, one by one: (1) factual contradictions or premises the sources do not support; (2) missing transitions, resources, actor responses, cultural conditions, or delays; (3) alternative explanations that account for the same phenomenon, or similar cases that failed differently; (4) conditions that can be kept as explicit speculation but not called established; (5) repairs that would strengthen a candidate, or failures that would open another path.
 > Give a basis for each item. Mark anything recalled from memory as unverified. Do not adjust probabilities to make the set pass, and do not remove a candidate for lack of precedent. End with the objections that remain.
 
+Also perform a creative challenge: identify paths prematurely pruned by today's product form, overlooked desires or institutions, and alternative mechanisms that could open a different future. This does not authorize invented factual support.
+
 **Recovering the result.** Store the reviewer's reply verbatim as `review.md`, then record each disposition (keep / revise / demote / delete / unresolved, with the reason) in `exploration.md`.
 
 **Known hazard.** On Claude Code, a subagent that spawns another subagent can have the result routed to the top-level session instead of its parent, which stalls the wait. Mitigation: always launch the reviewing subagent directly from the orchestrating session. Never spawn a subagent from inside a generating subagent.
@@ -40,7 +44,7 @@ Review request, reusable verbatim:
 
 Never write "independently reviewed" or "expert verified".
 
-## 2. Stage 3: choosing network tools
+## 2. Foothold and research phases: choosing network tools
 
 | Situation | First choice | Why |
 | --- | --- | --- |
@@ -55,7 +59,7 @@ If every route fails: work from the supplied materials, list the unread sources 
 ## 3. Artifacts and delivery
 
 - Write to `sextant-runs/<case-id>/` under the current work area. Never overwrite an existing case.
-- Files: `exploration.md` (candidates, source notes, changes across the two divergences, review dispositions) and `report.md` (for the reader). `review.md` and `review-packet.md` may be split out when that helps inspection.
+- Deep/extensive files follow [execution.md](../execution.md): preserve phase artifacts and receipts plus the reader-facing report. Store the actual review and packet, and point each accepted correction to its concrete reconciliation. Existing 0.1 cases retain their historical files.
 - Default to Markdown: the report carries source links, conditions, and qualifications, and Markdown stays quotable, diffable, and archivable. Produce an additional `report.html` only when the user explicitly asks for visualization or a presentation; keep the Markdown original.
 - Call `present_files` as the final step before replying, passing absolute paths.
 

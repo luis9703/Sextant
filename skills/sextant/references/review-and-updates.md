@@ -12,7 +12,15 @@ Ask the reviewer to distinguish:
 - A speculative condition that can remain explicit without being called established.
 - A repair that strengthens the candidate, or a failure that opens another path.
 
-Record the challenge, its basis, the disposition, and remaining disagreement. Keep, revise, downgrade, drop, and unresolved are all valid. A unchanged probability can be justified. Newness is neither a reason to accept a claim nor a reason to reject it.
+Record the challenge, its basis, the disposition, and remaining disagreement. Keep, revise, downgrade, drop, and unresolved are all valid. Use separate or mixed dispositions for separable issues. An unchanged probability can be justified. Newness is neither a reason to accept a claim nor a reason to reject it.
+
+Save the actual reply and review packet. Reconciliation names the location of the concrete repair in the final draft, or explains why the objection remains. Verify that retracted numbers and premises no longer support definite conclusions elsewhere. A claim's uncertainty must survive summary writing. Do not call a merely acknowledged objection resolved.
+
+Reviewer recollections are research leads, not evidence. Spend remaining verification resources on leads that can materially change a path; label unresolved leads unverified. Never add all recalled sources just to make the report look researched. Preserve useful detail in phase artifacts while keeping the reader-facing report coherent. The user's scope and the Skill's evidence rules outrank a reviewer's request for false precision or extra work. If a new context completes reconciliation, record the handoff and exactly what it received.
+
+Deep review covers two jobs: grounding and creative challenge. Grounding checks numbers, branch-specific dependencies, evidence status and whether observations distinguish alternatives. Creative challenge checks whether current-product constraints suppressed a broader future, whether human desires are assumed fixed, and whether additional material could yield a different path. The same fresh reviewer may do both; the orchestrator launches reviewers directly rather than asking generating subagents to create nested reviewers.
+
+If isolation or necessary verification is unavailable, record a partial review phase and its concrete limits. The receipt checker may verify other artifacts, but the run cannot claim full structural completion. It still may deliver useful conditional futures.
 
 For public-facing claims, distinguish package validation, a worked example, model review, expert evaluation, and prospective prediction performance. None substitutes for the others. BTF-2 motivates attention to blind spots and strategic conditions but explicitly limits causal attribution of individual reasoning factors: [paper, discussion and limitations](https://arxiv.org/html/2604.26106v1).
 

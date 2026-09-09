@@ -21,4 +21,10 @@ A pathway may be useful without being unprecedented. Compare it with the closest
 
 Keep speculative leaps visible. A path requiring a new scientific breakthrough belongs in a clearly conditional category. A path conflicting with established constraints should not be reported as plausible unless the relevant premise is explicitly changed into a hypothetical exercise.
 
+Distinguish three kinds of constraint: the current product's form, institutions that could change, and well-established hard limits. The first two can motivate transitions into a different design or social arrangement. Do not reject an entire future class merely because today's product is small, expensive or designed for one use.
+
+Deep work should develop the consequences of candidates rather than end after listing them. Follow the changed capability into behavior, relationships or institutions, and then into feedback and a new scarcity. Ask how people become different through use, how a refusal could spread, and how one actor's adaptation changes another's options. Show the conditions linking these changes; do not simply add increasingly dramatic claims.
+
+Use a separate creative challenge before final delivery. It looks for paths pruned too early, unused cross-domain material, missing human experiences, and alternative mechanisms. Grounding review and creative challenge should inform each other; neither a long source list nor absence of an existing example decides whether a conditional path is worth retaining.
+
 These are proposed working techniques. Design fixation and iterative divergence/convergence provide motivation, not evidence that this particular LLM workflow improves creativity: [Jansson and Smith](https://www.sciencedirect.com/science/article/pii/0142694X9190003F), [Design Council](https://www.designcouncil.org.uk/resources/framework-for-innovation/).

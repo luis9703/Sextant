@@ -1,0 +1,137 @@
+{
+  "contract_version": "0.2.0-alpha.1",
+  "created_at": "2026-09-07T16:48:09.072155+00:00",
+  "topic": "合成封闭世界：到 2038 年，共享任务机器人如何改变 R 镇普通家庭、社区关系与资产使用方式",
+  "profile": "deep",
+  "token_target": null,
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-09-07T16:48:32.130966+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "fa2b83f3380ae177c0cad76cc0c840d621a3af5052afa03fc892b19f293ec5de",
+          "bytes": 2127
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-09-07T16:49:00.399374+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "973968d8ecbf1dc6af611f273ea7c58c26498d6a4d6b70422bb57c70ae9c06c4",
+          "bytes": 1858
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-09-07T16:49:58.871036+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "b82976d0536bbf29aeb67ddd55b12f90c779c5a877c4c777ed6e5c1d3961d844",
+          "bytes": 3456
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-09-07T16:51:35.494866+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "56b2e1092783f7b80e21c5cc32f292e7ca0322063991018c60fbdd50a8b92dc1",
+          "bytes": 6024
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-09-07T16:54:06.361224+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "4359785c1984c5d4f3925b3384d900557f581a25a7554edf17ef84236d2f31bf",
+          "bytes": 5705
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-09-07T16:57:32.648038+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "ea08ad998b26f975c8af56aa10ccf020af98e2e79fb2d46a06e2e3aedcc82e66",
+          "bytes": 16108
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-09-08T00:25:33.971805+00:00",
+      "status": "partial",
+      "reason": "Host usage limit prevented fresh-context review; only coordinator checking occurred",
+      "artifacts": [
+        {
+          "path": "07-review-limitation.md",
+          "sha256": "08b543aa60550854b4ba20657c51a13e594ccd56e30b9aee4989d7ea979e2f35",
+          "bytes": 1703
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-09-08T00:25:34.040244+00:00",
+      "status": "partial",
+      "reason": "No independent review findings were available for reconciliation",
+      "artifacts": [
+        {
+          "path": "08-reconcile-limitation.md",
+          "sha256": "c532a964147c8398605df136e92b072b14a69d218eb2a5daa37115528b8e3d86",
+          "bytes": 1324
+        }
+      ]
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-09-08T00:25:34.104704+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "759d0a8e42a2724396bd80fce03207f59cef74c65ab5aea5e3226a56e85d6b90",
+          "bytes": 3235
+        }
+      ]
+    }
+  ]
+}

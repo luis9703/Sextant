@@ -21,14 +21,16 @@ import sys
 sys.dont_write_bytecode = True  # keep cloud-synced checkouts free of __pycache__
 
 import argparse
+import json
 import re
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit
 
 SKILL_DIR = Path("skills") / "sextant"
 SKILL_MAX_LINES = 500
 NAME_MAX = 64
 DESCRIPTION_MAX = 1024
+FRONTMATTER_KEYS = {"name", "description", "license", "compatibility", "metadata", "allowed-tools"}
 
 DOC_ROOTS = (
     "README.md",
@@ -42,7 +44,7 @@ DOC_ROOTS = (
     "examples",
     "skills",
 )
-SKIP_DIRS = {".git", "sextant-runs", "runs", "tmp", ".venv", "venv", "node_modules", ".idea", ".vscode"}
+SKIP_DIRS = {".git", "sextant-runs", "runs", "tmp", ".venv", "venv", "node_modules", ".idea", ".vscode", ".workbuddy"}
 CACHE_DIRS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".tox", ".nox"}
 TEXT_SUFFIXES = {".md", ".py", ".yaml", ".yml", ".txt", ".json", ".toml", ".cfg", ".ini", ".sh"}
 TEXT_NAMES = {"LICENSE", ".gitignore", ".gitattributes"}
@@ -56,6 +58,7 @@ NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 VERSION_BOLD_RE = re.compile(r"\*\*(\d+\.\d+\.\d+(?:-[0-9A-Za-z.]+)?)\*\*")
 CHANGELOG_HEADING_RE = re.compile(r"^## \[?([^\]\s]+)\]?", re.MULTILINE)
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+HTTP_URL_RE = re.compile(r"https?://[^\s<>\"'`]+")
 
 # Patterns are assembled from pieces so that this file does not match itself.
 SECRET_PATTERNS = [
@@ -125,6 +128,8 @@ def parse_frontmatter(text: str) -> tuple[dict, str | None]:
             return data, f"cannot parse frontmatter line {raw!r}"
         key = key.strip()
         if indent == 0:
+            if key in data:
+                return data, f"duplicate frontmatter key: {key}"
             if value.strip() == "":
                 parent = {}
                 data[key] = parent
@@ -134,6 +139,8 @@ def parse_frontmatter(text: str) -> tuple[dict, str | None]:
         else:
             if parent is None:
                 return data, f"indented frontmatter line without a parent mapping: {raw!r}"
+            if key in parent:
+                return data, f"duplicate nested frontmatter key: {key}"
             parent[key] = _unquote_scalar(value)
     return data, None
 
@@ -169,6 +176,9 @@ def check_skill(root: Path, report: Report) -> str | None:
     data, problem = parse_frontmatter(text)
     if problem:
         report.error(skill_md, problem)
+    unexpected = set(data) - FRONTMATTER_KEYS
+    if unexpected:
+        report.error(skill_md, "non-portable top-level fields; use an installer host overlay: " + ", ".join(sorted(unexpected)))
 
     name = data.get("name")
     if not isinstance(name, str) or not name:
@@ -191,6 +201,23 @@ def check_skill(root: Path, report: Report) -> str | None:
     version = metadata.get("version") if isinstance(metadata, dict) else None
     if not version:
         report.warn(skill_md, "frontmatter has no metadata.version; version consistency cannot be checked")
+
+    if data.get("license") == "MIT":
+        package_license = skill_dir / "LICENSE"
+        repo_license = root / "LICENSE"
+        if not package_license.is_file() or not repo_license.is_file():
+            report.error(package_license, "MIT package and repository licenses must both be present")
+        elif package_license.read_bytes() != repo_license.read_bytes():
+            report.error(package_license, "package license differs from repository license")
+
+    profile_file = skill_dir / "assets" / "depth-profiles.json"
+    if (skill_dir / "scripts" / "run_control.py").is_file():
+        try:
+            profiles = json.loads(profile_file.read_text(encoding="utf-8"))
+            if not isinstance(profiles, dict) or profiles.get("contract_version") != version:
+                report.error(profile_file, "contract_version differs from SKILL.md version")
+        except (OSError, ValueError) as exc:
+            report.error(profile_file, f"cannot read depth profiles: {exc}")
 
     line_count = text.count("\n") + (0 if text.endswith("\n") else 1)
     if line_count > SKILL_MAX_LINES:
@@ -271,6 +298,28 @@ def is_text_file(path: Path) -> bool:
     return path.suffix.lower() in TEXT_SUFFIXES or path.name in TEXT_NAMES
 
 
+def mask_remote_url_paths(text: str) -> str:
+    """Ignore remote URL path components for local-path heuristics only.
+
+    Keep query/fragment text and standalone paths visible. Secret and email
+    checks still use the original text. No request is made to any URL.
+    """
+    def mask(match: re.Match) -> str:
+        value = match.group(0)
+        try:
+            parsed = urlsplit(value)
+            host = parsed.hostname
+        except ValueError:
+            return value
+        if not host or host == "localhost" or host.endswith(".local"):
+            return value
+        start = len(parsed.scheme) + 3 + len(parsed.netloc)
+        end = start + len(parsed.path)
+        return value[:start] + " " * (end - start) + value[end:]
+
+    return HTTP_URL_RE.sub(mask, text)
+
+
 def check_tree(root: Path, report: Report) -> None:
     for path in sorted(root.rglob("*")):
         relative_parts = path.relative_to(root).parts
@@ -305,8 +354,9 @@ def check_tree(root: Path, report: Report) -> None:
         for label, pattern in SECRET_PATTERNS:
             if pattern.search(text):
                 report.error(path, f"looks like it contains a {label}")
+        path_text = mask_remote_url_paths(text)
         for label, pattern in PATH_PATTERNS:
-            match = pattern.search(text)
+            match = pattern.search(path_text)
             if match:
                 report.error(path, f"contains a {label}: {match.group(0)!r}")
         for match in EMAIL_RE.finditer(text):

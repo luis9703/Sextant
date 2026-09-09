@@ -4,7 +4,11 @@ Adapt this scaffold to the request; these prompts are not mandatory fields or a 
 
 Start with concrete future possibilities and why their differences matter. Mark fictional scenes as illustrations, and give the scope, information date, research limits, and actual review status compactly.
 
+The default depth is deep even for “imagine.” Identify the actual profile and any incomplete phases. Put the receipt checker result in a separate verification artifact so the recorded report is not altered afterward. State observed Token usage only when the host supplies it; otherwise state unknown. A target budget is not measured usage.
+
 For each retained pathway, explain the change in people's lives, the transitions that could lead there, key human desires and responses, enabling conditions, feedback, and failure branches. Compare it to the closest existing account and state what is added or still unknown. Put source links near present-day factual claims.
+
+Carry uncertain source claims into dependent conclusions. Preserve separate conditions for each path and separate current-product form from broader future possibilities. Check that corrections accepted in review are reflected here, including numbers, units, causal claims and withdrawn assumptions.
 
 Show the principal differences with a diagram or comparison when helpful. Paths can overlap; do not force probabilities or exact years onto them.
 
