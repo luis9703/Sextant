@@ -3,7 +3,7 @@ name: sextant
 description: "Develop imaginative, evidence-informed future pathways from a present phenomenon. 默认进行完整深度推演：理解事实、跨域与人性发散、研究后再创造、演化路径、审查与修订。用于未来想象、情景规划、趋势演化、长期影响、foresight；用户说想象一下也不自动降为速答。只在明确要求快速或简短时采用精简模式。不用于单纯事实查询、翻译或纯虚构写作。"
 license: MIT
 metadata:
-  version: "0.2.0-alpha.9"
+  version: "0.2.0-alpha.10"
 ---
 
 # Sextant

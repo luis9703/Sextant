@@ -39,6 +39,14 @@ For checked unchanged content, use revise --phase pathways --confirm --reason in
 
 An early partial pathways receipt remains in history. Once required and pending work is finished and the current synthesis is updated or confirmed after review against those results, that historical partial no longer blocks completion. The helper reports it in superseded_partial_phases; partial_phases lists remaining incomplete phases. A stale synthesis checkpoint, unfinished work or a partial in another phase still leaves the run incomplete. This records recovery, not semantic approval of the synthesis.
 
+For an interrupted revisable upstream phase (frame, foothold, diverge, research or recombine), preserve the partial receipt and finish the actual remaining work. Append its completed material using revise --complete; if the saved current material already covers the completed work, use --confirm --complete with a concrete reason. A document revision without --complete inherits the current completion status and does not clear a partial. next includes resume_options with the original phase contract and resolved arguments; they are recovery options, not a rule to halt useful conditional work when a source remains unavailable. A coordination checkpoint can simply save working files without closing an unfinished phase.
+
+```sh
+python3 -B skills/sextant/scripts/run_control.py revise --run /path/to/case --phase research --artifact 04-research-v2.md --complete --reason "Finished the interrupted research; remaining future assumptions are explicit"
+```
+
+The old receipt and files stay unchanged, and 00-current.md points to the current phase material and completion declaration. Changes to upstream status invalidate an earlier pathway checkpoint, so recheck its current synthesis before reconciliation. This declaration concerns performed work, not source certainty or imagined-future validity. Pathways keep their existing work and review conditions; review, reconciliation and delivery cannot be completed through this document revision option. Reconciliation remains frozen, and older contracts require their matching Skill rather than an implicit state upgrade.
+
 ## Record a performed review in its actual form
 
 Read [review-and-updates.md](review-and-updates.md). A full reply or a faithful issue summary can record a performed review. Declare representation, actual context and coverage; summary length alone is not grounds for partial. Limited or same-context review needs a concrete reason. Unavailable review is unperformed and remains partial.

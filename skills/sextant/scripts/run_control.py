@@ -233,6 +233,19 @@ def coverage_summary(receipt):
 def resource_contract(result: dict, state: dict, config: dict, run: Path) -> dict:
     """Return actionable instructions; absolute resource paths live only in tool output."""
     result = dict(result)
+    active = revisions.current(state)
+    resumable = [phase for phase in revisions.partial_status(state, development.summary(state))["partial_phases"]
+                 if phase in revisions.REVISION_PHASES - {"pathways"}]
+    if resumable:
+        result["resume_options"] = []
+        for name in resumable:
+            base = [sys.executable, "-B", str(Path(__file__).resolve()), "revise", "--run", str(run), "--phase", name]
+            goal = config["contracts"]["phases"][name]
+            result["resume_options"].append({"phase": name, "current": active[name],
+                "contract": {**goal, "references": [str((SKILL_ROOT / ref).resolve()) for ref in goal["references"]]},
+                "complete_argv": [*base, "--artifact", "<completed-phase-version>", "--complete", "--reason", "<what-was-actually-completed>"],
+                "confirm_complete_argv": [*base, "--confirm", "--complete", "--reason", "<why-the-saved-material-now-completes-this-phase>"],
+                "meaning": "Finish the actual phase work before declaring completion; editing a document alone does not complete it."})
     phase = result.get("phase")
     if result.get("next") == "phase" and phase == "reconcile" and not revisions.pathway_ready(state):
         result.update(next="refresh_pathways", phase="pathways", current=revisions.current(state).get("pathways"))
@@ -303,8 +316,15 @@ def persist_state(run: Path, state: dict) -> None:
     for receipt in state["receipts"]:
         suffix = ("；" + receipt["reason"]) if receipt["reason"] else ""
         if receipt["phase"] in superseded:
-            suffix += "；早期未完成已由当前综合承接"
+            suffix += ("；早期未完成已由当前综合承接" if receipt["phase"] == "pathways"
+                       else "；早期未完成已由当前阶段版本的完成声明承接")
         lines.append(f"- {receipt['phase']}：{receipt['status']}{suffix}")
+    updated = [(phase, item) for phase, item in active.items()
+               if phase in revisions.REVISION_PHASES - {"pathways"} and item["version"] > 1]
+    if updated:
+        lines += ["", "## 已更新的阶段材料", ""]
+        for phase, item in updated:
+            lines.append(f"- {phase}：版本{item['version']}，{item['status']}；" + ", ".join(link(f) for f in item["artifacts"]))
     lines += ["", "## 路径历史", ""]
     for receipt in state["receipts"]:
         if receipt["phase"] == "pathways":
@@ -431,6 +451,7 @@ def main(argv: list[str] | None = None) -> int:
     revise.add_argument("--phase", choices=sorted(revisions.REVISION_PHASES), required=True)
     revise.add_argument("--artifact", action="append", default=[])
     revise.add_argument("--confirm", action="store_true")
+    revise.add_argument("--complete", action="store_true", help="Declare actually completed phase work, preserving the earlier partial receipt")
     revise.add_argument("--reason", required=True)
     issue = sub.add_parser("review-add", help="Register a material objection or unused research lead for explicit disposition")
     issue.add_argument("--run", type=Path, required=True)
@@ -547,7 +568,7 @@ def mutate_run(args: argparse.Namespace, run: Path, config: dict) -> int:
             reserved.update(item["path"] for item in development.job_artifacts(state["work"]))
             if len({item["path"] for item in files}) != len(files) or reserved.intersection(item["path"] for item in files):
                 raise ValueError("Revision updates need new files distinct from earlier artifacts")
-            result = {"revision": revisions.append(state, args.phase, files, args.reason, args.confirm, now())}
+            result = {"revision": revisions.append(state, args.phase, files, args.reason, args.confirm, now(), args.complete)}
         development.validate_jobs(state, validate_artifact_record)
         review_contract.validate_issues(state, validate_artifact_record)
         revisions.validate(state, validate_artifact_record)

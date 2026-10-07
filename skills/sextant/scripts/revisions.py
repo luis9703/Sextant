@@ -12,16 +12,18 @@ def digest(value) -> str:
 
 
 def current(state: dict) -> dict:
-    result = {receipt["phase"]: {"artifacts": receipt["artifacts"], "version": 1,
+    result = {receipt["phase"]: {"artifacts": receipt["artifacts"], "version": 1, "status": receipt["status"],
               "after_receipts": state["phases"].index(receipt["phase"]) + 1}
               for receipt in state["receipts"]}
     for revision in state["revisions"]:
-        result[revision["phase"]] = revision
+        phase = revision["phase"]
+        result[phase] = {**revision, "status": revision.get("status", result[phase]["status"])}
     return result
 
 
 def dependency_fingerprint(state: dict) -> str:
-    upstream = {phase: item["artifacts"] for phase, item in current(state).items()
+    upstream = {phase: {"artifacts": item["artifacts"], "status": item["status"]}
+                for phase, item in current(state).items()
                 if phase in REVISION_PHASES - {"pathways"}}
     material = [issue for issue in state["review_issues"] if issue["kind"] == "material"]
     return digest({"work": state["work"], "upstream": upstream, "material_issues": material})
@@ -35,14 +37,18 @@ def pathway_ready(state: dict) -> bool:
 
 
 def partial_status(state: dict, work_summary: dict) -> dict:
-    """Keep historical partials, but let a current synthesis finish its work.
+    """Preserve historical partials and explicit completion declarations.
 
-    This uses existing work and checkpoint records, not a judgment of content.
-    Other partial phases remain incomplete.
+    A document update alone does not finish an incomplete upstream phase.
+    Pathway recovery still requires the existing work and review checkpoint.
     """
     historical = [receipt["phase"] for receipt in state["receipts"] if receipt["status"] == "partial"]
-    superseded = ["pathways"] if ("pathways" in historical and pathway_ready(state)
-                  and not work_summary["pending_ids"] and not work_summary["missing_kinds"]) else []
+    active = current(state)
+    superseded = [phase for phase in historical if phase in REVISION_PHASES - {"pathways"}
+                  and active[phase]["status"] == "done"]
+    if ("pathways" in historical and pathway_ready(state)
+            and not work_summary["pending_ids"] and not work_summary["missing_kinds"]):
+        superseded.append("pathways")
     return {"partial_phases": [phase for phase in historical if phase not in superseded],
             "superseded_partial_phases": superseded}
 
@@ -51,11 +57,15 @@ def validate(state: dict, validate_artifact) -> None:
     revisions = state.get("revisions")
     if not isinstance(revisions, list):
         raise ValueError("State needs a revisions list")
-    active = {r["phase"]: {"artifacts": r["artifacts"], "version": 1} for r in state["receipts"]}
+    active = {r["phase"]: {"artifacts": r["artifacts"], "version": 1, "status": r["status"]}
+              for r in state["receipts"]}
     for item in revisions:
         if not isinstance(item, dict) or item.get("phase") not in REVISION_PHASES or item["phase"] not in active:
             raise ValueError("Revision must refer to a recorded revisable phase")
         previous = active[item["phase"]]
+        status = item.get("status", previous["status"])
+        if not isinstance(status, str) or status not in {"done", "partial"} or (previous["status"] == "done" and status == "partial"):
+            raise ValueError("Invalid revision completion status")
         if item.get("previous") != previous["artifacts"] or type(item.get("version")) is not int or item["version"] != previous["version"] + 1:
             raise ValueError("Revision chain does not match its predecessor")
         if not isinstance(item.get("reason"), str) or not item["reason"].strip():
@@ -72,7 +82,7 @@ def validate(state: dict, validate_artifact) -> None:
             raise ValueError("An update needs a new file, preserving the preceding version")
         if not isinstance(item.get("dependency_fingerprint"), str) or len(item["dependency_fingerprint"]) != 64:
             raise ValueError("Invalid revision dependency fingerprint")
-        active[item["phase"]] = item
+        active[item["phase"]] = {**item, "status": status}
 
 
 def artifacts(state: dict):
@@ -80,7 +90,7 @@ def artifacts(state: dict):
         yield from item["artifacts"]
 
 
-def append(state: dict, phase: str, files, reason: str, confirm: bool, timestamp: str) -> dict:
+def append(state: dict, phase: str, files, reason: str, confirm: bool, timestamp: str, complete: bool = False) -> dict:
     active = current(state)
     if phase not in REVISION_PHASES or phase not in active:
         raise ValueError("Revise a previously recorded phase")
@@ -90,6 +100,7 @@ def append(state: dict, phase: str, files, reason: str, confirm: bool, timestamp
         raise ValueError("Revision or confirmation needs --reason")
     old = active[phase]
     item = {"phase": phase, "version": old["version"] + 1, "kind": "confirm" if confirm else "update",
+            "status": "done" if complete else old["status"],
             "previous": old["artifacts"], "artifacts": old["artifacts"] if confirm else files,
             "reason": reason.strip(), "recorded_at": timestamp, "after_receipts": len(state["receipts"]),
             "dependency_fingerprint": dependency_fingerprint(state)}

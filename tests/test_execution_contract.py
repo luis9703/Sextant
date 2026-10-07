@@ -28,13 +28,14 @@ class ExecutionContractTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content)
 
-    def recombine(self):
+    def recombine(self, partial_research=False):
         for phase in CONFIG["phases"][:5]:
             self.file(phase + ".md")
-            self.ok("record", "--phase", phase, "--artifact", phase + ".md")
+            extra = ("--status", "partial", "--reason", "Synthetic interrupted research") if partial_research and phase == "research" else ()
+            self.ok("record", "--phase", phase, "--artifact", phase + ".md", *extra)
 
-    def review(self, no_issues=True, limited=False):
-        self.recombine()
+    def review(self, no_issues=True, limited=False, partial_research=False):
+        self.recombine(partial_research)
         for kind in ["evolution", "contrast"]:
             self.ok("work-add", "--id", kind, "--kind", kind, "--source", "recombine.md", "--question", "Synthetic work question")
             self.file(kind + ".md")
@@ -146,6 +147,93 @@ class ExecutionContractTests(unittest.TestCase):
                 state = json.loads((self.run / "run-state.json").read_text())
                 self.assertEqual(state["receipts"][5], historical)
                 self.assertEqual((self.run / "pathways.md").read_bytes(), original)
+
+    def test_partial_research_requires_explicit_completion_and_preserves_history(self):
+        for kind in ("update", "confirm"):
+            with self.subTest(kind=kind):
+                self.run = Path(self.temp.name) / ("research-" + kind)
+                self.ok("init", "--topic", "Synthetic resumable research")
+                self.review(partial_research=True)
+                state = json.loads((self.run / "run-state.json").read_text())
+                historical = state["receipts"][3]
+                original = (self.run / "research.md").read_bytes()
+                self.file("research-v2.md", "Synthetic completed research with remaining future conditions\n")
+                self.ok("revise", "--phase", "research", "--artifact", "research-v2.md", "--reason", "More material, no completion declaration yet")
+                self.assertEqual(self.ok("status")["partial_phases"], ["research"])
+                before = (self.run / "run-state.json").read_bytes()
+                option = self.ok("next")["resume_options"][0]
+                self.assertEqual(option["phase"], "research")
+                self.assertIn("--complete", option["complete_argv"])
+                self.assertTrue(all(Path(ref).is_file() for ref in option["contract"]["references"]))
+                self.assertEqual(before, (self.run / "run-state.json").read_bytes())
+                self.ok("revise", "--phase", "pathways", "--confirm", "--reason", "Synthetic current conditional synthesis")
+                if kind == "update":
+                    self.file("research-v3.md", "Synthetic actually finished research\n")
+                    args = ("--artifact", "research-v3.md")
+                else:
+                    args = ("--confirm",)
+                self.ok("revise", "--phase", "research", *args, "--complete", "--reason", "Actual fixture phase work completed; futures remain conditional")
+                status = self.ok("status")
+                self.assertEqual(status["partial_phases"], [])
+                self.assertEqual(status["superseded_partial_phases"], ["research"])
+                self.assertEqual(self.ok("next")["next"], "refresh_pathways")
+                self.ok("revise", "--phase", "pathways", "--confirm", "--reason", "Rechecked after upstream completion")
+                result = self.reconciliation("[报告摘录](report.md#L1)\n> Availability retained as a condition\n")
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.ok("record", "--phase", "deliver", "--artifact", "report.md")
+                self.assertEqual(self.ok("verify")["structural_status"], "pass")
+                saved = json.loads((self.run / "run-state.json").read_text())
+                self.assertEqual(saved["receipts"][3], historical)
+                self.assertEqual((self.run / "research.md").read_bytes(), original)
+                index = (self.run / "00-current.md").read_text()
+                self.assertIn("research：partial", index)
+                self.assertIn("已更新的阶段材料", index)
+                self.assertIn("research：版本3，done", index)
+
+    def test_completion_does_not_clear_other_partial_phases_or_pending_work(self):
+        self.recombine(partial_research=True)
+        self.ok("work-add", "--id", "pending", "--kind", "evolution", "--source", "recombine.md", "--question", "Synthetic unfinished evolution")
+        self.file("pathways.md")
+        self.ok("record", "--phase", "pathways", "--artifact", "pathways.md", "--status", "partial", "--reason", "Work pending")
+        self.ok("revise", "--phase", "research", "--confirm", "--complete", "--reason", "Research completed, development not completed")
+        value = self.ok("status")
+        self.assertEqual(value["partial_phases"], ["pathways"])
+        self.assertEqual(value["development_work"]["pending_ids"], ["pending"])
+        self.assertEqual(value["execution_status"], "incomplete")
+
+    def test_old_revision_without_status_does_not_claim_research_completion(self):
+        self.recombine(partial_research=True)
+        self.file("research-v2.md")
+        self.ok("revise", "--phase", "research", "--artifact", "research-v2.md", "--reason", "Synthetic legacy document update")
+        path = self.run / "run-state.json"
+        state = json.loads(path.read_text())
+        del state["revisions"][0]["status"]
+        path.write_text(json.dumps(state))
+        value = self.ok("status")
+        self.assertEqual(value["partial_phases"], ["research"])
+        self.assertEqual(value["current_versions"]["research"]["status"], "partial")
+
+    def test_invalid_completion_status_and_post_reconciliation_changes_are_rejected(self):
+        self.recombine(partial_research=True)
+        self.ok("revise", "--phase", "research", "--confirm", "--complete", "--reason", "Synthetic actual completion")
+        path = self.run / "run-state.json"
+        state = json.loads(path.read_text())
+        state["revisions"][0]["status"] = ["done"]
+        path.write_text(json.dumps(state))
+        invalid = call("status", "--run", str(self.run))
+        self.assertEqual(invalid.returncode, 2)
+        self.assertIn("Invalid revision completion status", invalid.stderr)
+        self.run = Path(self.temp.name) / "frozen"
+        self.ok("init", "--topic", "Synthetic frozen reconciliation")
+        self.review()
+        self.ok("revise", "--phase", "pathways", "--confirm", "--reason", "Synthetic retained synthesis")
+        result = self.reconciliation("[报告摘录](report.md#L1)\n> Availability retained as a condition\n")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        before = (self.run / "run-state.json").read_bytes()
+        rejected = call("revise", "--run", str(self.run), "--phase", "research", "--confirm", "--complete", "--reason", "Too late")
+        self.assertEqual(rejected.returncode, 2)
+        self.assertIn("Reconciliation is frozen", rejected.stderr)
+        self.assertEqual(before, (self.run / "run-state.json").read_bytes())
 
     def test_preexisting_result_requires_explicit_adoption(self):
         self.recombine()

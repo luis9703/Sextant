@@ -1,5 +1,5 @@
 {
-  "contract_version": "0.2.0-alpha.9",
+  "contract_version": "0.2.0-alpha.10",
   "default_profile": "deep",
   "phases": [
     "frame",
