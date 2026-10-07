@@ -1,0 +1,61 @@
+{
+  "phases": {
+    "frame": {
+      "goal": "Keep the user's future question and make a provisional seed sketch before topical search.",
+      "completion": ["State scope, horizon and resources", "Separate the user's observation, current facts and assumptions", "Save a short capability/relationship sketch and the unknowns that could change its meaning"],
+      "references": ["references/execution.md"]
+    },
+    "foothold": {
+      "goal": "Resolve only the factual ambiguities needed to understand the seed.",
+      "completion": ["Check capability, availability, scope and other consequential seed premises or retain them as assumptions", "Stop when the seed is intelligible; defer market surveys and use-case narratives", "Record incidental exposure to existing future narratives without claiming an unexposed first pass"],
+      "references": ["references/research.md", "references/execution.md"]
+    },
+    "diverge": {
+      "goal": "Explore different mechanisms before a deliberate topical survey, using scoped independent contexts when useful and available.",
+      "completion": ["Develop candidates beyond the obvious framing", "Include changing wants, refusal and unfamiliar uses", "Keep any search exposure visible; do not pretend learned priors were erased"],
+      "references": ["references/imagination.md", "references/independent-exploration.md"]
+    },
+    "research": {
+      "goal": "Find material that opens, changes or challenges a meaningful path.",
+      "completion": ["Retain claim-local sources and counterevidence", "Seek enabling material and unfamiliar uses as well as failures", "Omit peripheral statistics and label unread leads"],
+      "references": ["references/research.md"]
+    },
+    "recombine": {
+      "goal": "Use new material to change or refine the candidate mechanisms.",
+      "completion": ["Explain changed dependencies or actor responses", "Distinguish refinement from a different route", "Choose consequential open questions for development"],
+      "references": ["references/imagination.md", "references/development.md"]
+    },
+    "pathways": {
+      "goal": "Save a pre-review pathway draft that integrates development results.",
+      "completion": ["Integrate performed evolution and contrast work without repeating it", "Explain transitions, responses, feedback and branch-specific conditions", "Label this synthesis as pre-review; later corrections use a new revision"],
+      "references": ["references/development.md", "references/execution.md"]
+    },
+    "review": {
+      "goal": "Perform a scoped grounding and creative challenge; judge the reviewer's proposed repairs as candidate mechanisms.",
+      "completion": ["Give the reviewer neutral candidates and evidence", "Save a full reply or an honestly labelled issue summary, stating context and coverage", "Distinguish supported premise corrections from proposed causal repairs; register material issues and park unused peripheral leads"],
+      "references": ["references/review-and-updates.md"]
+    },
+    "reconcile": {
+      "goal": "Finish the current pathway version and report, then account for every registered issue.",
+      "completion": ["Update or explicitly confirm the pathway synthesis after review and any follow-up work", "Use a disposition and actual excerpt for each relevant target of a material issue", "Distinguish unresolved conditions and unused leads from unperformed work"],
+      "references": ["references/review-and-updates.md", "references/execution.md"]
+    },
+    "deliver": {
+      "goal": "Deliver the bound report and the current-version entry point.",
+      "completion": ["Include the report bound at reconciliation unchanged", "State integrity, execution, review scope and semantic limits separately", "Use 00-current.md to find the latest synthesis and historical versions"],
+      "references": ["references/execution.md"]
+    }
+  },
+  "work": {
+    "evolution": {
+      "goal": "Follow the world after explicit enabling assumptions hold.",
+      "completion": ["Follow an ordinary event, other responses and repeated use", "Show a consequential change, feedback or alternative", "Bridge back to the present and name the next worthwhile question"],
+      "references": ["references/development.md"]
+    },
+    "contrast": {
+      "goal": "Explain different choices in a comparable situation.",
+      "completion": ["State the compared situation, options and meaningful actor differences", "Explain conditional choices and a change that reverses them", "For commercial questions distinguish need, use, payment and capture; retain nonparticipation"],
+      "references": ["references/development.md"]
+    }
+  }
+}

@@ -1,8 +1,22 @@
 # Evidence that changes the exploration
 
-Research both failure conditions and enabling material. Relevant material may include primary studies, datasets, documented deployments, costs with comparable units, user practices, nonadoption, regulation, and historical cases. Do not limit scanning to expert forecasts about the target industry.
+Research is a source of creative material and a check on consequential premises. Distinguish supported current facts, proposed mechanisms and imagined future consequences. Current facts need appropriate support; mechanisms need an intelligible explanation and assumptions; future consequences do not need historical evidence that they have already occurred. Missing adoption data is not by itself a refutation of a new use.
 
-Use short source notes with a stable local marker. Capture what matters to the claim: title and link, publication or event date when known, access date, location within the source, scope, source type, and what it does and does not establish. Label unread or inaccessible sources accordingly. Search snippets and publication metadata alone do not establish the full paper's conclusions.
+## Foothold intake before a topical survey
+
+In framing, save a short provisional sketch from the user's seed before source lookup: which capability or relationship is at stake, what could change its meaning, and what remains an assumption. This is not a polished first world or a claim of a prior-free model.
+
+The foothold lookup answers only consequential seed questions: what the object does, who can access it, whether it is announced or available at the cutoff, and what material configuration or capture boundaries apply. Prefer targeted primary-source queries about those questions over queries about future use cases, market leaders or predicted impacts. A seed about population growth may need a denominator; a capability seed usually does not need sales surveys. Stop when the seed is intelligible or the ambiguity is explicitly retained as a condition, rather than after a quota of searches.
+
+Search results can bring in existing industry stories even when the query is narrow. Record a concise topic-level exposure note and defer deliberate evaluation of those narratives to research. Do not say the first divergence was unexposed, pretend the material was unseen, or let incidental snippets become factual support. Where the authorized host supports an isolated fact scan, give it the seed questions and request factual boundaries plus exposure notes; the generating context need not preload a use-case survey. Isolation still cannot erase learned priors or all fixation.
+
+The protected ordering is divergence before **deliberate broad topical research**, not before every factual check. Use the pre-scan sketch and exposure note to notice fixation during the second divergence. They do not guarantee novelty.
+
+## Research that changes the paths
+
+Research both failure conditions and enabling material: studies, capabilities, materials, methods, costs, practices, nonadoption, institutions and historical mechanisms. After initial divergence, seek direct attempts, abandonment and unexpected uses, including in distant fields. If the proposed use does not yet exist, investigate the capabilities and complementary changes needed to enable it. History can suggest a mechanism or a counterexample without bounding all futures to familiar patterns. Keep the search gap visible when evidence cannot be found or read.
+
+Use short source notes with a stable local marker. Capture what matters to the claim: title and link, publication or event date when known, access date, location within the source, scope, source type, and what it does and does not establish. Preserve these links or resolvable source markers in the review packet, and link the supporting page near material factual claims in the report. A bare institution name or “verified” label is not a source trail. Label unread or inaccessible sources accordingly. Search snippets and publication metadata alone do not establish the full paper's conclusions.
 
 Prefer evidence proportional to the claim. A vendor may establish what it announced; it does not independently establish reliability. A study may support a result under specific tasks and participants; it does not directly establish population adoption. Multiple articles repeating one announcement form one source family.
 
@@ -10,11 +24,11 @@ Keep conflicting findings and measurement differences visible. Costs need compat
 
 Before using a consequential number in a mechanism, name what it measures and check the unit, currency, period, denominator and source population. A fare is not a cost; revenue is not profit; a falling expenditure share need not mean lower waiting time or spare capacity. Keep a supported number distinct from an unsupported explanation for it. If a quantity is uncertain, carry that uncertainty into every dependent claim, use it explicitly as a scenario parameter, or remove it. A footnote cannot undo stronger prose.
 
-Source status remains local to the claim in all profiles, including brief. A numerical result from a narrow experiment cannot become a general capability, a vendor plan cannot become an operating policy, and an unverified percentage cannot silently become an established premise during recombination. Check accepted corrections again in the final draft.
+Source status remains local to the claim in all profiles, including brief. For an experiment, distinguish the compared groups and measured outcome from the explanation attributed to them. For a capability, retain material client, access, deployment and configuration conditions. These boundaries can generate adoption sequences and alternative designs; they do not automatically eliminate a broader future. A narrow result cannot become a general capability, a vendor plan cannot become an operating policy, and an unverified percentage cannot become an established premise during recombination. Check accepted corrections again in the final draft.
 
 Review closest prior ideas after the initial divergence. State the search scope and describe overlap. Use bounded language such as “not covered by this baseline” or “no direct match found in this search,” rather than claiming no one has proposed it. Finding a precursor can improve the pathway without invalidating the usefulness of exploring it.
 
-Stop when unresolved questions are unlikely to change the material branches, or when resources are exhausted. Distinguish those reasons. Prioritize gaps that could replace the preferred mechanism, create a new branch, or change an observation plan. If access fails, use genuinely available evidence and narrow claims; never invent references or pretend the inaccessible source was read.
+Stop or narrow research when another lookup is unlikely to open, change or eliminate a meaningful branch; return capacity to imagination. Distinguish this from resource exhaustion. Omit peripheral statistics that add apparent authority without changing the path. If an important current premise remains unresolved, repair it, make it an explicit scenario condition or narrow the claim while continuing useful exploration. Never invent references or pretend inaccessible material was read. Factual corrections remain necessary; they need not become a separate project that displaces the future question.
 
 Explain time as conditional development where appropriate: demonstration, economically viable use, trusted operation, and diffusion can overlap or stall. Define adoption's population, task, frequency, and geography before making a numeric claim. Detailed scenarios are not automatically disjoint events whose probabilities sum to one.
 

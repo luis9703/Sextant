@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import os
 import shutil
 import subprocess
@@ -29,8 +30,145 @@ class RunControlTests(unittest.TestCase):
 
     def record(self, phase: str, *extra: str) -> subprocess.CompletedProcess:
         name = phase + ".md"
-        (self.run / name).write_text(f"Synthetic fixture for {phase}; not a real evaluation.\n")
+        if not (self.run / name).exists():
+            (self.run / name).write_text(f"Synthetic fixture for {phase}; not a real evaluation.\n")
+        if phase == "pathways":
+            state = json.loads((self.run / "run-state.json").read_text())
+            for kind in state["work_required"]:
+                work_id = "fixture-" + kind
+                if any(job["id"] == work_id for job in state["work"]):
+                    continue
+                opened = call("work-add", "--run", str(self.run), "--id", work_id, "--kind", kind,
+                              "--source", "recombine.md", "--question", "Synthetic development question")
+                self.assertEqual(opened.returncode, 0, opened.stderr)
+                result_name = work_id + ".md"
+                (self.run / result_name).write_text("Synthetic work result; not imagination quality evidence.\n")
+                saved = call("work-record", "--run", str(self.run), "--id", work_id, "--artifact", result_name)
+                self.assertEqual(saved.returncode, 0, saved.stderr)
+        if phase == "reconcile":
+            state = json.loads((self.run / "run-state.json").read_text())
+            if not any(r['phase']=='pathways' for r in state['revisions']):
+                confirmed = call("revise", "--run", str(self.run), "--phase", "pathways", "--confirm", "--reason", "Synthetic unchanged synthesis")
+                self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+            (self.run / "deliver.md").write_text("Synthetic report; not a real evaluation.\n")
+            (self.run / name).write_text("Disposition fixture.\n[Report excerpt](deliver.md#L1)\n> Synthetic report; not a real evaluation.\n")
+            extra = ("--report", "deliver.md", *extra)
+        if phase == "review":
+            context = "unavailable" if "partial" in extra else "isolated"
+            coverage = "limited" if context == "unavailable" else "complete"
+            extra = ("--review-format", "issue_summary", "--review-context", context, "--review-coverage", coverage,
+                     "--no-issues-reason", "Synthetic review raised no material issues", *extra)
         return call("record", "--run", str(self.run), "--phase", phase, "--artifact", name, *extra)
+
+    def reach_reconciliation(self) -> None:
+        for phase in CONFIG["phases"][:CONFIG["phases"].index("reconcile")]:
+            self.assertEqual(self.record(phase).returncode, 0)
+        confirmed = call("revise", "--run", str(self.run), "--phase", "pathways", "--confirm", "--reason", "Synthetic unchanged synthesis")
+        self.assertEqual(confirmed.returncode, 0, confirmed.stderr)
+
+    def test_done_reconciliation_requires_saved_report(self) -> None:
+        self.reach_reconciliation()
+        (self.run / "reconcile.md").write_text("Disposition notes")
+        before = (self.run / "run-state.json").read_bytes()
+        result = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "reconcile.md")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("--report", result.stderr)
+        self.assertEqual(before, (self.run / "run-state.json").read_bytes())
+
+    def test_report_changed_after_reconciliation_blocks_delivery(self) -> None:
+        self.reach_reconciliation()
+        self.assertEqual(self.record("reconcile").returncode, 0)
+        before = (self.run / "run-state.json").read_bytes()
+        (self.run / "deliver.md").write_text("Changed conclusion after reconciliation")
+        result = self.record("deliver")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("Report changed after reconciliation", result.stderr)
+        self.assertEqual(before, (self.run / "run-state.json").read_bytes())
+        self.assertEqual(call("verify", "--run", str(self.run)).returncode, 1)
+
+    def test_delivery_must_include_the_bound_report(self) -> None:
+        self.reach_reconciliation()
+        self.assertEqual(self.record("reconcile").returncode, 0)
+        shutil.copyfile(self.run / "deliver.md", self.run / "other.md")
+        result = call("record", "--run", str(self.run), "--phase", "deliver", "--artifact", "other.md")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("must include", result.stderr)
+        self.assertEqual(self.record("deliver").returncode, 0)
+        self.assertEqual(call("verify", "--run", str(self.run)).returncode, 0)
+
+    def test_report_snapshot_uses_artifact_boundaries_and_distinct_role(self) -> None:
+        self.reach_reconciliation()
+        (self.run / "reconcile.md").write_text("Disposition notes")
+        outside = self.run.parent / "outside.md"
+        outside.write_text("Outside file")
+        os.link(outside, self.run / "linked.md")
+        for name in ["../outside.md", "missing.md", "run-state.json", "frame.md", "reconcile.md", "linked.md"]:
+            with self.subTest(name=name):
+                result = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "reconcile.md", "--report", name)
+                self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertEqual(outside.read_text(), "Outside file")
+        result = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "reconcile.md", "--status", "partial", "--reason", "No completed report")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(self.record("deliver").returncode, 0)
+        data = json.loads(call("verify", "--run", str(self.run)).stdout)
+        self.assertEqual(data["partial_phases"], ["reconcile"])
+
+    def test_report_binding_cannot_be_attached_to_another_phase(self) -> None:
+        (self.run / "draft.md").write_text("Draft")
+        result = self.record("frame", "--report", "draft.md")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("only used", result.stderr)
+
+    def test_invalid_report_snapshot_clears_stale_pass(self) -> None:
+        for phase in CONFIG["phases"]:
+            self.assertEqual(self.record(phase).returncode, 0)
+        self.assertEqual(call("verify", "--run", str(self.run)).returncode, 0)
+        state_file = self.run / "run-state.json"
+        state = json.loads(state_file.read_text())
+        receipt = next(r for r in state["receipts"] if r["phase"] == "reconcile")
+        receipt["report_snapshot"]["sha256"] = "invalid"
+        state_file.write_text(json.dumps(state))
+        self.assertEqual(call("verify", "--run", str(self.run)).returncode, 2)
+        self.assertEqual(json.loads((self.run / "verification.json").read_text())["structural_status"], "invalid_state")
+
+    def test_reconciliation_rejects_wrong_excerpt_locations(self) -> None:
+        self.reach_reconciliation()
+        (self.run / "report.md").write_text("# Saved report\nA conditional conclusion.\n")
+        (self.run / "other.md").write_text("A conditional conclusion.\n")
+        invalid = [
+            "Disposition without evidence\n",
+            "[Report excerpt](report.md#L1)\n> A conditional conclusion.\n",
+            "[Report excerpt](report.md#L2)\n> Invented repair.\n",
+            "[Report excerpt](report.md#L99)\n> A conditional conclusion.\n",
+            "[Report excerpt](other.md#L1)\n> A conditional conclusion.\n",
+            "[Report excerpt](report.md#L0)\n> A conditional conclusion.\n",
+            "[Report excerpt](report.md#L2)\nMissing blockquote\n",
+        ]
+        before = (self.run / "run-state.json").read_bytes()
+        for text in invalid:
+            with self.subTest(text=text):
+                (self.run / "notes.md").write_text(text)
+                result = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "notes.md", "--report", "report.md")
+                self.assertEqual(result.returncode, 2, result.stdout)
+                self.assertEqual(before, (self.run / "run-state.json").read_bytes())
+        (self.run / "notes.md").write_text("Accepted repair.\n[Report excerpt](report.md#L2)\n> conditional conclusion\n")
+        result = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "notes.md", "--report", "report.md")
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_verify_rechecks_excerpt_even_with_matching_note_hash(self) -> None:
+        for phase in CONFIG["phases"]:
+            self.assertEqual(self.record(phase).returncode, 0)
+        self.assertEqual(call("verify", "--run", str(self.run)).returncode, 0)
+        note = self.run / "reconcile.md"
+        note.write_text("[Report excerpt](deliver.md#L99)\n> Synthetic report\n")
+        state_file = self.run / "run-state.json"
+        state = json.loads(state_file.read_text())
+        receipt = next(r for r in state["receipts"] if r["phase"] == "reconcile")
+        receipt["artifacts"][0].update(sha256=hashlib.sha256(note.read_bytes()).hexdigest(), bytes=note.stat().st_size)
+        state_file.write_text(json.dumps(state))
+        result = call("verify", "--run", str(self.run))
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("Report excerpt does not match", result.stdout)
 
     def test_defaults_to_deep_and_does_not_invent_usage(self) -> None:
         result = call("status", "--run", str(self.run))

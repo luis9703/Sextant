@@ -8,6 +8,10 @@ This file covers host-specific execution only. Where it conflicts with `SKILL.md
 
 The repository's canonical frontmatter is portable. To preserve WorkBuddy-only display and management fields, the repository installer supports `--host workbuddy`, reading [agents/workbuddy.json](../../agents/workbuddy.json) and adding its fields to the copied SKILL.md. That JSON is this project's installer configuration, not a native WorkBuddy manifest. The method body remains unchanged. A symlink to canonical source does not apply an install-time overlay; existing customized or symlinked installations must be reviewed and preserved before choosing copy installation. Do not mutate global installation or settings as a side effect of a foresight run. Overlay rendering is tested; actual WorkBuddy field interpretation and client behavior remain separate tests.
 
+## 0.1. Independent candidate exploration
+
+When a broad seed has meaningful alternative directions and authorized Agent contexts are available, use [independent-exploration.md](../independent-exploration.md). The orchestrating session launches explorers directly with the same neutral seed and needed facts, but different useful questions; do not send the main candidate list or another explorer's answer. Use the installed exploration_packet.py to export selected inputs, or packet_argv from next for a recorded work question. Give the explorer TASK.md and the packet contents rather than the full run or control response. Integrate actual returned mechanisms before naming a main account. No explorer count or independent-generation claim is required when the host cannot provide it.
+
 ## 1. Review phase: fresh-context review
 
 **Which tool.** Use the `Agent` tool with `subagent_type: general-purpose`.
@@ -34,15 +38,19 @@ Review request, reusable verbatim:
 
 Also perform a creative challenge: identify paths prematurely pruned by today's product form, overlooked desires or institutions, and alternative mechanisms that could open a different future. This does not authorize invented factual support.
 
-**Recovering the result.** Store the reviewer's reply verbatim as `review.md`, then record each disposition (keep / revise / demote / delete / unresolved, with the reason) in `exploration.md`.
+Ask the reviewer to distinguish supported premise corrections from proposed causal repairs. The generating session judges both: it may use a sourced fact while rejecting the mechanism proposed around it. When a bridge fails, consider a justified alternative that preserves or transforms the future; do not invent an exclusion to make the scene concrete. Keep and unresolved remain valid dispositions.
+
+**Recovering the result.** Save the actual review as a full reply or faithfully labelled issue summary, declaring context and coverage. Register material objections and park unused peripheral leads. Update the pathway synthesis with a new version, or confirm it unchanged when warranted, then complete and re-open the current synthesis and report. Record issue dispositions and bilingual literal excerpts as described in [review-and-updates.md](../review-and-updates.md). The helper binds both current files; deliver the frozen report and point readers to 00-current.md. Use the actual installed script/reference paths returned by next, not paths relative to an assumed working directory. Earlier cases retain their original records and matching contracts.
 
 **Known hazard.** On Claude Code, a subagent that spawns another subagent can have the result routed to the top-level session instead of its parent, which stalls the wait. Mitigation: always launch the reviewing subagent directly from the orchestrating session. Never spawn a subagent from inside a generating subagent.
 
-**When isolation is unavailable.** Unavailable means: no `Agent` tool, the call fails, the subagent cannot reach the network, the user forbids it, or the budget is spent. In that case write this, identically in `exploration.md` and in the review-status line of `report.md`:
+**When isolation is unavailable.** Isolation may be unavailable because there is no `Agent` tool, the call fails, the user forbids it, or the budget is spent. Record the actual limit in the review phase artifact and receipt, and summarize it in the review-status line of `report.md`. If a same-context check was performed, state:
 
 > 本次为同上下文检查，未做隔离审查。同一模型与同一批来源不构成独立的事实佐证。
 
 Never write "independently reviewed" or "expert verified".
+
+An unperformed review remains partial with context unavailable. A performed same-context or source-limited review declares that actual context and coverage with a reason. A reviewer's network failure is a source-access limit; it does not by itself mean that no isolated review occurred. Use the existing phase records and 00-current.md; do not create an extra exploration.md for a nine-phase run.
 
 ## 2. Foothold and research phases: choosing network tools
 
@@ -54,7 +62,7 @@ Never write "independently reviewed" or "expert verified".
 | Pages behind login, dynamic rendering, or a captcha | the `web-access` skill | Drives a local browser with session state and rendering |
 | Facing a captcha | Do not bypass it | Record the source as unread or unreachable, per `references/research.md` |
 
-If every route fails: work from the supplied materials, list the unread sources and gaps in `exploration.md`, and label `report.md` as **bounded research**. Do not describe it as completed comprehensive research.
+If every route fails: work from the supplied materials, list the unread sources and gaps in the actual foothold or research phase artifact and receipt, and label `report.md` as **bounded research**. Reflect any review limitation in its review status. Do not describe it as completed comprehensive research or create an extra process manuscript.
 
 ## 3. Artifacts and delivery
 
