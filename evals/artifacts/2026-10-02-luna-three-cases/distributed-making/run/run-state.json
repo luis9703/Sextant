@@ -1,0 +1,145 @@
+{
+  "contract_version": "0.2.0-alpha.2",
+  "created_at": "2026-10-02T05:09:54.112940+00:00",
+  "topic": "Local distributed making: consumer life over fifteen years",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:09:59.568452+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "14fcb8da5dc780e635df7b8729aba9b2ec7d93a77783a1a60771cc25741c7bd2",
+          "bytes": 531
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:10:13.786677+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "1b922310b11748c09c83d3ee30f67741d5499cd64ea63f3b10d29b167e94ae0d",
+          "bytes": 1011
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:10:24.924803+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "496767f67e1030cd4a9822f5bacc7d64bc0396197f363ee640047ed7e486a767",
+          "bytes": 1341
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:10:46.678058+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "e7111f0c371a71a7e3805fe48057ef941704d30bedab190ccdd155beb0eebedb",
+          "bytes": 3842
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:10:54.594778+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "78fd96bb4628a7e3076dd4d1387eb13ee43bd1bf2dfce49f203ef82b3f713baf",
+          "bytes": 1238
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:11:20.783279+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "08e2fbbae9b246832330630e4ad27150301612b89b1ce01b197bfc216bcc51c5",
+          "bytes": 6443
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:14:19.779527+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "review-packet.md",
+          "sha256": "b0956eb4b24f9b25ca6cb5c7c3b09ca510cd4177f798f43cd63d6299e8970348",
+          "bytes": 4943
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "6857bdd483b086e45bd82cf88141876c0218c414199758d537e737cd58ac4685",
+          "bytes": 10278
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T05:15:07.277750+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "bd96ffc86bc3c7a1027ed1bb06b319fc94beeb2a22a3e5bebb265a3a18fcbb3c",
+          "bytes": 3482
+        }
+      ]
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T05:15:43.366777+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "bb135345a3e017d173b7de7c6fc068b6884decde35133fce7a2c96e2cdd6d428",
+          "bytes": 9778
+        }
+      ]
+    }
+  ]
+}

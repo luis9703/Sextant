@@ -1,0 +1,150 @@
+{
+  "contract_version": "0.2.0-alpha.3",
+  "created_at": "2026-10-02T05:32:49.924513+00:00",
+  "topic": "未来十年非程序员借助AI制作软件后，软件、工作分工与公司形态的多种未来",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:33:06.542937+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "032d5a1e4f73a020c6cf3fdbad512435d9467b0ea5b22174361a21dde46a8a55",
+          "bytes": 963
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:33:24.612643+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "c07cc4fcb5aa933205257753f708d0f7817084e7eae565c26bdb2317bafb1d51",
+          "bytes": 1268
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:33:24.668096+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "a8a02a719bede1df2413f5ac88e6190e9b3d2f53c3b7a88fc9696d7f4e8a833b",
+          "bytes": 1303
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:34:05.113552+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "4fc5dd2c9b35a8538ea227f0bd48ee9e655c8cff617087aae62807c01e264cc0",
+          "bytes": 2818
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:34:05.214694+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "6948a783c71f46fb06f4afab0d5259a839317aeafd4b9e4e8b24823de5c39492",
+          "bytes": 2337
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:35:13.110662+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "f9fa69f6b9f9b2dd665bdcd37f7b95818f5ba73bc411a3e803479eb353485531",
+          "bytes": 7525
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:38:21.729780+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "neutral-review-packet.md",
+          "sha256": "9d59a46a5d391a1796b29ae9d0809877f018c42f8901d46c575d6a608277ba2a",
+          "bytes": 5669
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "0e781947f15a9dc5227a32f47ad5fbb851dfc88be88a5bba731f0de4cdde3787",
+          "bytes": 8600
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T05:40:34.166288+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "9fef339241dc9e7978068cefd056fbf146ca2cc56c5d9dc402bfe56640df3df7",
+          "bytes": 3495
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "45788f5957c1a6f50ec5b8bfd26ea971294b2d72f63f58398ed0f66e92b7ee52",
+        "bytes": 13539
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T05:40:34.246234+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "45788f5957c1a6f50ec5b8bfd26ea971294b2d72f63f58398ed0f66e92b7ee52",
+          "bytes": 13539
+        }
+      ]
+    }
+  ]
+}

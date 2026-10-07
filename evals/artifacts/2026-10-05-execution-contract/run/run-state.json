@@ -1,0 +1,804 @@
+{
+  "contract_version": "0.2.0-alpha.7",
+  "created_at": "2026-10-04T17:12:42.358668+00:00",
+  "topic": "如果语音助手开始能代人整理和提出日常安排，未来十年家人和朋友之间的协商会怎样变化？",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "budget_accounting": "The default target ranges are provisional engineering starting points, not empirically validated optima. Set a profile target to null to disable it. Targets describe a planned run-wide envelope, not measured usage, a hard runtime cap or a minimum spend. Do not pad work to reach a token count. Actual input, output, cached input and reasoning counters require host telemetry with its accounting convention; absent telemetry is unknown.",
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-04T17:13:13.216234+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "5de61da6ad7930b9ace74e6138ee82f504abee336707d5123c1c3358e8bd29e2",
+          "bytes": 1630
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-04T17:14:54.051686+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "2fe84c20434b3efc93295315e4115ba6847d00c77212ff7b79bf635af8eb8dd7",
+          "bytes": 1725
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-04T17:14:54.096015+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "0b97f9962df7ddeefecad454433e7a1068af8212bd265fccc453d632d7cca2b0",
+          "bytes": 3947
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-04T17:18:25.248390+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "c48d6fb36d616b39a2b0bddb66d6716035acbe971b7e5b6de632500ec8572e7b",
+          "bytes": 6257
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-04T17:18:25.291845+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "8e2c0840d03e98c42737c188718b28636cf242f17d6db2548234793512b6dcdc",
+          "bytes": 4525
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-04T17:25:02.043224+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways-v1.md",
+          "sha256": "a58de9ac06ed21f96b13c3afc8a1f405b9a03dc376b390dbd705c364f2439829",
+          "bytes": 14637
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-04T17:36:25.131078+00:00",
+      "status": "done",
+      "reason": "审查覆盖全部候选与两项任务；原始资料审计有明确范围，非全文源审计或专家评价",
+      "artifacts": [
+        {
+          "path": "07-review-summary.md",
+          "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+          "bytes": 12777
+        }
+      ],
+      "review_record": {
+        "format": "issue_summary",
+        "context": "isolated",
+        "coverage": "complete",
+        "no_issues_reason": ""
+      }
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-04T17:44:05.621883+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "f3533a9850cd42f0e80060fc81188337104757005a5c3c1255f3fe14e792b9ea",
+          "bytes": 12203
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "c507f54bfa9c27bc509cdd39ab308ee71fd6745ae2029fe90450def7dca0313b",
+        "bytes": 17178
+      },
+      "pathways_snapshot": {
+        "path": "06-pathways-v2.md",
+        "sha256": "d5d3b7e3fc0746bdf7b1098633f190cfa3a39884e43b233e1d06154aeeb15dac",
+        "bytes": 19817
+      },
+      "issue_coverage": {
+        "dispositions": [
+          {
+            "id": "R1",
+            "action": "revise",
+            "reason": "修改。追加care-e4并整合行动缺口→本人认可的安排→本人选择必要披露；区分接手与原因。最低信息仍可泄露时明确缩窄承诺、保持未决，不把设计当已验证。"
+          },
+          {
+            "id": "R2",
+            "action": "revise",
+            "reason": "修改。追加care-e4，发展无法安全停止必要照护时的私下兜底、可见成功遮蔽责任与争取有限替补。资源改变另列条件，没有假定外部服务自动出现。"
+          },
+          {
+            "id": "R3",
+            "action": "revise",
+            "reason": "修改。failure-c2对照同一退出后的主持者回应、参与者授权及准备者兜底；综合/报告保存失败的意义劳动和可重返条件，保留共同未知路线，不以缺历史为否定。报告后续段落还保存新的固定操心者及减少探索。"
+          },
+          {
+            "id": "R4",
+            "action": "revise",
+            "reason": "修改。接受竞争机制，分别写新增动员、每案义务/轮次，两者均不是充分条件。观察表分记邀请、确认、不能忽略的义务，数量没变也可有压力；未采集数据或安排监测。"
+          },
+          {
+            "id": "R5",
+            "action": "revise",
+            "reason": "修改。来源身份、即时质问、承担失约和模板失真分开；公开AI起草本人确认的比较仅为探索性辨识。两项匿名一次性交互实验边界在综合第65行及报告第53行已写明，保留怀疑结果非因果及不外推十年。"
+          },
+          {
+            "id": "R6",
+            "action": "revise",
+            "reason": "修改，保留原条件桥。failure-c2加入可核对损失触发、一方仍偏好肯定与核对后健康淡化；实际反复失约形成合理界限为竞争解释，须查履约、建议遗漏及先后。报告第63行还明确此区别；未称修复已验证。"
+          },
+          {
+            "id": "R7",
+            "action": "revise",
+            "reason": "修改。rules-e5发展规则权集中→表面确认→不留记录的互助→平行小表→争议/惩罚/退出。P1/P2/P3局部成立与全体失效分开，不把所有未来改写成控制社会。新增条件未作现时事实。"
+          },
+          {
+            "id": "R8",
+            "action": "revise",
+            "reason": "修改报告来源表述，去掉精确更新日，保留能力有限起点与日期未重核实。生成时曾在页面看到更新标记，审查未读到不等于它已错误；本报告不依赖该元数据，不扩大调查。"
+          },
+          {
+            "id": "L1",
+            "action": "not_used",
+            "reason": "2605.07912只在早期作为外围摘要线索，未作为独立佐证或修复前提；无需虚构报告摘录或全文核查。"
+          },
+          {
+            "id": "L2",
+            "action": "not_used",
+            "reason": "未加入额外游戏、控制家庭、替代照护等外部案例的事实；新工作为明示条件发展，未用回忆案例建立前提。"
+          }
+        ],
+        "excerpts": [
+          {
+            "issue": "R1",
+            "target": "pathways",
+            "line": 23,
+            "quote": "具体交接可先只显示“今日陪同尚未确认”，由父亲认可仍需出行及可接受的陪同安排，再由本人选择是否向可信者披露必要原因；共同知道谁接手不等于共同知道异常原因。没有可信者或最低信息已足以使家人猜中被拒绝者时，语义隐私不能保证，承诺须缩为寻找可接受行动而非保证没人推断。原因与交接可以保持未决，系统不能编理由填绿；这是未验证的条件设计。"
+          },
+          {
+            "issue": "R1",
+            "target": "report",
+            "line": 13,
+            "quote": "照护中，有限信息也可能不够。父亲不愿让某位手足陪诊，又不愿说明原因：先只共享“今日陪同尚未确认”，由父亲确认仍需出行与可接受的安排；必要原因只由本人选择向可信者披露。共同知道谁接手，不等于共同知道异常原因。若被拒绝者是唯一有空的人，一句“换个人”就可能泄露，系统不能保证没人推断，更不能编个中性理由填绿。没有可信者或安全替代时，原因与交接保持未决，承诺须缩为寻找可接受行动。"
+          },
+          {
+            "issue": "R2",
+            "target": "pathways",
+            "line": 37,
+            "quote": "不可退出的稳定世界：今天必须陪诊、其他人不接手时，原协调者可暂停额外访友，却未必能拒绝必要照护。几周后她私下留兜底路线和核实电话，公开轮值表因她补洞而更成功，她的剩余责任更难被看见。协商退成争取一段真正交付的替补，而不是已实现责任轮值。可信接手人、可承担资金或适当替代照护可改变拒绝范围，但不能假定自动出现；未具备时软件仍可能只帮她维持原结构。"
+          },
+          {
+            "issue": "R2",
+            "target": "report",
+            "line": 25,
+            "quote": "必要照护也有不能拒绝的稳定世界。今天必须陪诊、其他人不接手，小薇可以取消额外访友，却未必能停掉必要照护。数周后她私下保存兜底路线、提前核实，公开轮值表因她补洞而更成功，她的责任更难看见。协商退成争取一段真正交付的替补，而不是实现全责任轮值。可信接手者、可承担资金或适当替代照护能改变拒绝范围，但不能假定自动出现。没有这些资源，软件可能只让她更省力地维持原结构。"
+          },
+          {
+            "issue": "R3",
+            "target": "pathways",
+            "line": 47,
+            "quote": "退出后的代价也须有人承担。一次体力费用均合规的活动，有朋友仍因不舒服提前离开；若主持者把退出理解为边界正常运作，安排返程并承诺下次仍邀请，退出者可以只缩小下一轮未知内容。若主持者把离开当作拒绝心意并要求安慰，退出者可能返回全明示或拒绝参加。准备、调整与失望的意义劳动不能靠安全边界抹去。名义轮流但总由擅长策划者兜底，会产生新的固定操心者；若别人不愿准备后备安排，群体可能减少探索。"
+          },
+          {
+            "issue": "R3",
+            "target": "report",
+            "line": 33,
+            "quote": "失败会改变下一轮。一位朋友即使费用体力均未超界，仍因不舒服提前离开。主持者若把退出理解为边界正常运作，安排返程、承诺下次仍邀请，离开者可以只缩小下轮未知范围。若主持者将它当作拒绝心意，要求安慰或事后冷落，这人可能回到全明示或不再来。低物理风险不等于低关系代价；准备、调整、失望须有人承担。"
+          },
+          {
+            "issue": "R4",
+            "target": "pathways",
+            "line": 53,
+            "quote": "回应压力有两条分别成立的桥：新增动员，或每案回应义务/轮次增加。数量变多若可汇总并忽略，未必拥塞；数量没变但每次都须确认偏好、修改候选、批准代理，也会增加工作。P4成功后人人随口提，原先相聚的热情变成处理邀请的工作。朋友可能约定每段时间只接收一份合并提案，或保留“本周不要为我的空白找事”的状态。协商从给每个选项答复，转向提前谈提案额度和不回应的意义。"
+          },
+          {
+            "issue": "R4",
+            "target": "report",
+            "line": 39,
+            "quote": "生成选项容易后，压力可以来自两条桥：邀请事件增多，或同样数量的邀请要求更多确认、修改和授权。数量变多但只需看一份汇总且可忽略，未必拥塞；数量没变但每次都须选择许多细节，也可能让人疲惫。"
+          },
+          {
+            "issue": "R5",
+            "target": "pathways",
+            "line": 65,
+            "quote": "智能回复实验中实际使用与被怀疑使用的评价不同，怀疑的负面相关不是因果结论；两项匿名参与者的一次性交互实验不能外推十年亲密关系。因此这里没有“AI邀请必然伤感情”的事实前提。[Hohenstein等，2021前印本Results与Limitations](https://arxiv.org/html/2102.05756)。要求“你亲口说”可能要的是来源身份，也可能要即时质问、有人承担取消成本、避免模板失真。若公开AI起草而本人亲口确认、可被质问仍被接受，则承担回应较符合该事件；若这些相同而仍拒绝AI起草，才较契合来源意义，但表达准确性仍须区分。这是探索性比较，不是因果识别。亲手来源若可轻易伪造，仪式的信号作用也会弱化；真正兑现可能重新成为稀缺证明。"
+          },
+          {
+            "issue": "R5",
+            "target": "report",
+            "line": 51,
+            "quote": "“亲口说”不一定要求纯人工作者，也可能要即时质问、有人面对取消成本、避免模板失真。若双方知道AI起草，而本人亲口确认、可被质问的邀请仍被接受，承担回应更契合此事；若其他条件相同仍拒绝AI起草，才较契合来源仪式，但还需区分语气是否准确。这是探索性比较，不是因果识别试验。亲手来源若易伪造，真正守约又可能成为稀缺证明。"
+          },
+          {
+            "issue": "R6",
+            "target": "pathways",
+            "line": 75,
+            "quote": "反转的触发可是一笔可核对损失：预订无法退、朋友已调班，私人助手却一再漏掉这些代价。取消者因此要求多种不贬低对方的解释并亲口核对；另一方可能仍只想得到肯定。两人可承认损失、减为更少而可兑现的计划，承担放慢回复和面对不悦；也可能核对后价值仍不合，友好淡化并保留其他联系，不能叫工具修复失败。实际反复失约产生的“不准临时取消”也可能是合理界限；要看真实代价、建议遗漏、规则变硬的顺序，不能从更硬的语气推断迎合循环。"
+          },
+          {
+            "issue": "R6",
+            "target": "report",
+            "line": 61,
+            "quote": "反转可由具体损失触发：无法退的预订、朋友已调班，而助手一再漏掉这些代价。取消者要求先呈现几种不贬低对方的解释，再亲口核对；另一方仍可能只想被肯定。双方可减少活动、改为更可兑现的承诺，承担慢回复和面对不悦；也可核对后价值仍不合，友好淡化并保留别的联系，不能归为工具修复失败。还有人把助手只留在日期任务，重要失约由本人谈。"
+          },
+          {
+            "issue": "R7",
+            "target": "pathways",
+            "line": 81,
+            "quote": "若共享账户主人能独自定义“有空就应接手”、隐藏自己的空档又说“系统算过了”，其他人可能为避冲突表面确认；一人的静默被重开后，她与另一成员私下互助而不记录，以免互助被再次当作可征用能力。共同表越来越成功，真实协商迁到电话、纸笔或只共享自愿窗口的平行小表。新需要是一块不被默认征用、不留下完整轨迹的协商空间。"
+          },
+          {
+            "issue": "R7",
+            "target": "report",
+            "line": 67,
+            "quote": "六条路线的成功不是必须全体拥有同等能力，但共同边界若无法谈判，会打开另一世界。假设共享账户主人把“有空就应接手”设为默认，隐藏自己的空档却说“系统算过了”。其他人避冲突表面确认；一人的静默被重开后，她与另一个人私下互助而不记录，避免互助再次变成可征用能力。"
+          },
+          {
+            "issue": "R8",
+            "target": "report",
+            "line": 79,
+            "quote": "当前厂商材料描述材料转日历、家庭偏好建议及定时日历/邮件摘要，支持有限起点而非可靠多方谈判。[Amazon产品材料](https://www.aboutamazon.com/news/devices/new-alexa-generative-artificial-intelligence)、[Google 2025-06-06发布](https://blog.google/products-and-platforms/products/gemini/scheduled-actions-gemini-app/)。Amazon精确更新日未在审查中重新核实，最终报告不依赖该日期。厂商地区/账户限制不当作所有未来设计的永久边界。"
+          }
+        ],
+        "unresolved_ids": [],
+        "not_used_ids": [
+          "L1",
+          "L2"
+        ],
+        "semantic_status": "coverage and literal positions only; adequacy unverified"
+      },
+      "no_issues_reason": ""
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-04T17:44:21.036148+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "c507f54bfa9c27bc509cdd39ab308ee71fd6745ae2029fe90450def7dca0313b",
+          "bytes": 17178
+        }
+      ]
+    }
+  ],
+  "work_required": [
+    "evolution",
+    "contrast"
+  ],
+  "work": [
+    {
+      "id": "care-e1",
+      "kind": "evolution",
+      "question": "在自动提案与有限保密成立后，连续照护例外如何改变责任分配和家人协商？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:18:36.348681+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "8e2c0840d03e98c42737c188718b28636cf242f17d6db2548234793512b6dcdc",
+          "bytes": 4525
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:21:17.332092+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/care-e1.md",
+              "sha256": "5aa32bec4cfa94d5b59c2a5a5b085c59881707265b99399f33c25ac6b4a30f45",
+              "bytes": 3749
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "run-state.json"
+      ]
+    },
+    {
+      "id": "cancel-c1",
+      "kind": "contrast",
+      "question": "同一次生日聚会临时取消，谁选择保密替案、亲口解释或代理辩护；哪个条件会翻转选择？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:18:36.450034+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "8e2c0840d03e98c42737c188718b28636cf242f17d6db2548234793512b6dcdc",
+          "bytes": 4525
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:21:17.427236+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/cancel-c1.md",
+              "sha256": "d702c90252f360e67c72fd8361cfdde9c4d6593652e570d28392f6102dcb6c74",
+              "bytes": 3659
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "run-state.json"
+      ]
+    },
+    {
+      "id": "play-e2",
+      "kind": "evolution",
+      "question": "朋友能授权可控惊喜后，重复成功怎样创造新欲望、邀约拥塞、圈子变化与反转？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:18:36.552420+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "8e2c0840d03e98c42737c188718b28636cf242f17d6db2548234793512b6dcdc",
+          "bytes": 4525
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:21:17.524799+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/play-e2.md",
+              "sha256": "95cde37e0463596c02fb651cb27e3059ca1a4a71d05f331a886d5abc12d89bd4",
+              "bytes": 3944
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "run-state.json"
+      ]
+    },
+    {
+      "id": "reasons-e3",
+      "kind": "evolution",
+      "question": "当双方各自得到礼貌但自我正当化的取消解释，重复协商怎样停滞；失败能否产生不同的实践而不只升级算法？",
+      "priority": 1,
+      "after": [
+        "cancel-c1"
+      ],
+      "created_at": "2026-10-04T17:22:07.142356+00:00",
+      "inputs": [
+        {
+          "path": "work/cancel-c1.md",
+          "sha256": "d702c90252f360e67c72fd8361cfdde9c4d6593652e570d28392f6102dcb6c74",
+          "bytes": 3659
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:22:07.250055+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/reasons-e3.md",
+              "sha256": "f0f9adf29e501d2e58a1c2aaa547cad9232531e01dc1e739a3c7d87cddde2705",
+              "bytes": 3046
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "run-state.json",
+        "work/cancel-c1.md",
+        "work/care-e1.md",
+        "work/play-e2.md"
+      ]
+    },
+    {
+      "id": "care-e4",
+      "kind": "evolution",
+      "question": "拒绝陪同又不愿解释时怎样升级最低信息；无法退出照护且无人接手会怎样稳定下来？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:36:26.187336+00:00",
+      "inputs": [
+        {
+          "path": "07-review-summary.md",
+          "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+          "bytes": 12777
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:38:46.664295+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/care-e4.md",
+              "sha256": "1dddba59fd8044bce99c1d294a95e7c3e69fd99a7e079b0730f2cf9230a53a00",
+              "bytes": 3456
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "06-pathways-v1.md",
+        "07-review-summary.md",
+        "handoff-pre-review.md",
+        "review-packet/candidates.md",
+        "review-packet/evidence.md",
+        "review-packet/review-request.md",
+        "run-state.json",
+        "verification.json",
+        "work/cancel-c1.md",
+        "work/care-e1.md",
+        "work/play-e2.md",
+        "work/reasons-e3.md"
+      ]
+    },
+    {
+      "id": "rules-e5",
+      "kind": "evolution",
+      "question": "规则修改权被共享账户主人掌握后，其他人怎样用私下安排形成替代互助？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:36:26.284940+00:00",
+      "inputs": [
+        {
+          "path": "07-review-summary.md",
+          "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+          "bytes": 12777
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:38:46.759962+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/rules-e5.md",
+              "sha256": "4a21a0e6e9beba67f7e7a57ab2dd43e73797e64f651f80eae42d50dcc82ccba7",
+              "bytes": 3322
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "06-pathways-v1.md",
+        "07-review-summary.md",
+        "handoff-pre-review.md",
+        "review-packet/candidates.md",
+        "review-packet/evidence.md",
+        "review-packet/review-request.md",
+        "run-state.json",
+        "verification.json",
+        "work/cancel-c1.md",
+        "work/care-e1.md",
+        "work/play-e2.md",
+        "work/reasons-e3.md"
+      ]
+    },
+    {
+      "id": "failure-c2",
+      "kind": "contrast",
+      "question": "同一次探索退出及失约冲突核对中，行动者如何选择、谁承担代价、何种条件改变选择？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-04T17:36:26.383283+00:00",
+      "inputs": [
+        {
+          "path": "07-review-summary.md",
+          "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+          "bytes": 12777
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-04T17:38:46.853983+00:00",
+          "status": "done",
+          "origin": "after_registration",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/failure-c2.md",
+              "sha256": "6f31eb54e1c7e4076865481bd8b9f509c54c797da9194eb688c92c5df0c14a06",
+              "bytes": 3720
+            }
+          ]
+        }
+      ],
+      "files_at_registration": [
+        ".run-control.lock",
+        "00-current.md",
+        "01-frame.md",
+        "02-foothold.md",
+        "03-diverge.md",
+        "04-research.md",
+        "05-recombine.md",
+        "06-pathways-v1.md",
+        "07-review-summary.md",
+        "handoff-pre-review.md",
+        "review-packet/candidates.md",
+        "review-packet/evidence.md",
+        "review-packet/review-request.md",
+        "run-state.json",
+        "verification.json",
+        "work/cancel-c1.md",
+        "work/care-e1.md",
+        "work/play-e2.md",
+        "work/reasons-e3.md"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "phase": "pathways",
+      "version": 2,
+      "kind": "update",
+      "previous": [
+        {
+          "path": "06-pathways-v1.md",
+          "sha256": "a58de9ac06ed21f96b13c3afc8a1f405b9a03dc376b390dbd705c364f2439829",
+          "bytes": 14637
+        }
+      ],
+      "artifacts": [
+        {
+          "path": "06-pathways-v2.md",
+          "sha256": "d5d3b7e3fc0746bdf7b1098633f190cfa3a39884e43b233e1d06154aeeb15dac",
+          "bytes": 19817
+        }
+      ],
+      "reason": "依据真实隔离审查R1-R7和三项追加发展修订交接、无法退出、失败选择、回应工作、观察与规则权分支",
+      "recorded_at": "2026-10-04T17:40:18.814776+00:00",
+      "after_receipts": 7,
+      "dependency_fingerprint": "57c2041b072309ee7d9610be9762fd5536ae82c738303679cc13b0dac559e2b6"
+    }
+  ],
+  "review_issues": [
+    {
+      "id": "R1",
+      "kind": "material",
+      "question": "保密与异常可见需具体信息升级桥",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.223751+00:00"
+    },
+    {
+      "id": "R2",
+      "kind": "material",
+      "question": "不可退出照护需有可承担的失败世界",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.315812+00:00"
+    },
+    {
+      "id": "R3",
+      "kind": "material",
+      "question": "共同未知失败后的意义劳动与选择",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.410834+00:00"
+    },
+    {
+      "id": "R4",
+      "kind": "material",
+      "question": "回应拥塞需区分数量和每案义务",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.505180+00:00"
+    },
+    {
+      "id": "R5",
+      "kind": "material",
+      "question": "来源与承担回应的观察辨识及两项实验措辞",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.599383+00:00"
+    },
+    {
+      "id": "R6",
+      "kind": "material",
+      "question": "解释回路反转需触发损失与实际界限的竞争解释",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.694374+00:00"
+    },
+    {
+      "id": "R7",
+      "kind": "material",
+      "question": "规则修改权不平等的稳定后果需发展",
+      "targets": [
+        "pathways",
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.787523+00:00"
+    },
+    {
+      "id": "R8",
+      "kind": "material",
+      "question": "Amazon精确更新日未重新核实，报告去掉日",
+      "targets": [
+        "report"
+      ],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.883674+00:00"
+    },
+    {
+      "id": "L1",
+      "kind": "lead",
+      "question": "未用2605.07912外围研究",
+      "targets": [],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:25.978885+00:00"
+    },
+    {
+      "id": "L2",
+      "kind": "lead",
+      "question": "未扩展外部案例的外围线索",
+      "targets": [],
+      "source": {
+        "path": "07-review-summary.md",
+        "sha256": "fd98115d8f35a5f7a90010ff5ea97038396658e13863e4966f30f81897bd8ea0",
+        "bytes": 12777
+      },
+      "recorded_at": "2026-10-04T17:36:26.075184+00:00"
+    }
+  ]
+}

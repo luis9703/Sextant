@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-02T05:14:31.973362+00:00",
+  "profile": "deep",
+  "state_fingerprint": "da54d810151ea7dac21c681d471442055e585bf65010d87d2534b3a4d503c84e",
+  "structural_status": "pass",
+  "recorded_phases": 9,
+  "missing_phases": [],
+  "partial_phases": [],
+  "artifact_errors": [],
+  "token_target": [
+    50000,
+    100000
+  ],
+  "measured_token_usage": null,
+  "usage_status": "unknown; consult host telemetry separately",
+  "semantic_status": "not established by this script",
+  "scope": "Checks recorded order and artifact integrity; not source truth, actual isolation, creativity, or model compliance outside this helper."
+}

@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "file": "review/neutral-packet.md",
+      "bytes": 16127,
+      "lines": 104,
+      "broken_local_links": []
+    },
+    {
+      "file": "review/neutral-choices.md",
+      "bytes": 7296,
+      "lines": 42,
+      "broken_local_links": []
+    },
+    {
+      "file": "review/neutral-evidence.md",
+      "bytes": 7846,
+      "lines": 55,
+      "broken_local_links": []
+    },
+    {
+      "file": "review/neutral-group-world.md",
+      "bytes": 3368,
+      "lines": 19,
+      "broken_local_links": []
+    }
+  ],
+  "check_scope": "file presence, UTF-8 readability and local Markdown link resolution; no semantic or factual approval"
+}

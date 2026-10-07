@@ -1,0 +1,320 @@
+{
+  "contract_version": "0.2.0-alpha.6",
+  "created_at": "2026-10-02T12:23:08.202225+00:00",
+  "topic": "在生成式AI与HTML传播普及后，Office/WPS类软件是否仍有市场需求？",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T12:23:33.360344+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "97ecc9f81a2e86341de1e391cae303fe9be950fd4549c80f27a6415498c51eb9",
+          "bytes": 1569
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T12:23:33.400405+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "ba9135b377f0a22258ce8ad96c4dea5909b34890c51e3f41bd5853fb97144996",
+          "bytes": 2836
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T12:23:58.732305+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "b743d43b70e7e0d14d1accb7141439affabb5e56fa1d041aaab780b8e4335c4d",
+          "bytes": 3298
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T12:24:49.329324+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "16bbe4206d51ecc088c51e7301cdb7f0da91c28c42e4273aa4eb021a334e6b5a",
+          "bytes": 5866
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T12:25:11.611693+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "f734622686411d4937e102bf3fdd85401c8bbecb542e2ca61f3895f79a1e85ee",
+          "bytes": 4612
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T12:27:54.403624+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "c5c450582f8f4286b3825902f41133d4bc492a8542e219c580c83ac279db082e",
+          "bytes": 12307
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T12:35:05.295975+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "review-packet.md",
+          "sha256": "6329f8937d851a8d2f08f262c30c08859e2b5be46d0fc9b0c7561be4358878a7",
+          "bytes": 12132
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "546c579ec7e61fe7b39a0a8439b516d086eded99427e3f900670d994ff1e2333",
+          "bytes": 13591
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T12:40:36.400346+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "b552ef2534bd8829003941537bd7f9fa02d80fa97158224ce3d690f24dca78ec",
+          "bytes": 6469
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "ceb9892c4a36abef7bf86d5decde57d1143806f7ebc1999909442882479d5a8e",
+        "bytes": 13239
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T12:40:42.146216+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "ceb9892c4a36abef7bf86d5decde57d1143806f7ebc1999909442882479d5a8e",
+          "bytes": 13239
+        }
+      ]
+    }
+  ],
+  "work_required": [
+    "evolution",
+    "contrast"
+  ],
+  "work": [
+    {
+      "id": "live-object-evolution",
+      "kind": "evolution",
+      "question": "Assume typed source plus audience-specific HTML views become trustworthy in one recurring reporting workflow. Follow ordinary use, the next actors’ responses and feedback, failure/branch and bridge conditions.",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:25:19.895364+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "f734622686411d4937e102bf3fdd85401c8bbecb542e2ca61f3895f79a1e85ee",
+          "bytes": 4612
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:25:40.336778+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/evolution-live-object.md",
+              "sha256": "9467215fb36bd337e897f0e5f191cfb27a719bc4ffb68256784b53a4b02fec4b",
+              "bytes": 3559
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "actor-contrast",
+      "kind": "contrast",
+      "question": "For the same recurring monthly decision, compare a structured internal team, an external/regulated counterparty and a small independent operator: who chooses live source, Office artifact, HTML report, or no reporting, who pays/captures value, and what flips each choice?",
+      "priority": 1,
+      "after": [
+        "live-object-evolution"
+      ],
+      "created_at": "2026-10-02T12:25:40.375314+00:00",
+      "inputs": [
+        {
+          "path": "work/evolution-live-object.md",
+          "sha256": "9467215fb36bd337e897f0e5f191cfb27a719bc4ffb68256784b53a4b02fec4b",
+          "bytes": 3559
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:26:16.294450+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/contrast-actors.md",
+              "sha256": "c9c90dda4edee9da86f7d12490ee51ce7d0a9aa76d75f2dd5fcbc9796bb8bcd9",
+              "bytes": 3559
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-evolution",
+      "kind": "evolution",
+      "question": "Assume trustworthy data, explicit permissions, replayable decision receipt, and institutional acceptance. Follow an approved resource allocation through actual execution, next-cycle underperformance, frontline objection, and resulting routines or refusals. What document demand disappears and what explanation/accountability/coordination demand appears? Trace the shortest bridge.",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:35:43.127297+00:00",
+      "inputs": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "c5c450582f8f4286b3825902f41133d4bc492a8542e219c580c83ac279db082e",
+          "bytes": 12307
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "546c579ec7e61fe7b39a0a8439b516d086eded99427e3f900670d994ff1e2333",
+          "bytes": 13591
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:36:07.597930+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/decision-evolution.md",
+              "sha256": "ea851fe356ff1fc64efa84983d5c450a4f069a148032677efb0c6e0681640c40",
+              "bytes": 4944
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-contrast",
+      "kind": "contrast",
+      "question": "For the same resource decision, compare (a) suite plus agent, (b) approval/execution in workflow with on-demand export, and (c) human-authored document meeting. Hold trust and data quality stable; contrast receiving party needs for editable calculations and decision needs for dissent/narrative persuasion. Separate beneficiary, operator, approver, payer, use, willingness-to-pay and value capture; identify one condition that flips choice.",
+      "priority": 1,
+      "after": [
+        "decision-evolution"
+      ],
+      "created_at": "2026-10-02T12:36:07.637671+00:00",
+      "inputs": [
+        {
+          "path": "work/decision-evolution.md",
+          "sha256": "ea851fe356ff1fc64efa84983d5c450a4f069a148032677efb0c6e0681640c40",
+          "bytes": 4944
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "546c579ec7e61fe7b39a0a8439b516d086eded99427e3f900670d994ff1e2333",
+          "bytes": 13591
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:36:28.034418+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/contrast-decision.md",
+              "sha256": "d453cdd83e2c22e894951651df223c41fcaa5dfd072eaf886ee878cce6bbb085",
+              "bytes": 3506
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "approved-source-correction",
+      "kind": "evolution",
+      "question": "Assume one linked source drives live views and preserves approved snapshots. Follow a source correction before approval and one after approval through downstream views/actions, recipients’ choice to accept/reapprove/export, and resulting routine. Distinguish this changed temporal rule from existing candidate 2 and show a failure branch that produces a future workflow.",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:36:28.073991+00:00",
+      "inputs": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "c5c450582f8f4286b3825902f41133d4bc492a8542e219c580c83ac279db082e",
+          "bytes": 12307
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "546c579ec7e61fe7b39a0a8439b516d086eded99427e3f900670d994ff1e2333",
+          "bytes": 13591
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:36:44.190130+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/approved-source-correction.md",
+              "sha256": "c39abe7a2af81fc9cff00e3b4f21e0b01cc2883b6b863ae4d7238e3c60c2870e",
+              "bytes": 2961
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "contract_version": "0.2.0-alpha.2",
+  "created_at": "2026-10-02T05:09:31.253646+00:00",
+  "topic": "Nonprogrammers making software with AI: ten-year futures for software, work, and firms",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:09:39.992914+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "d99f46e99d3067fe17fd1835de888b9a3af514ecdaf1ecd757f98401d4f2d027",
+          "bytes": 872
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:09:40.030000+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "89dfbbc53d1dc8c07b84651e20eb2f45ecc30e78e4d16eb469e5b24f81f51957",
+          "bytes": 451
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:10:12.205912+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "6feb93a30268086903bcfd2f990ddb6029c6c1f85bb6d8c5d1d821328df38ee8",
+          "bytes": 1208
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:10:12.287081+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "fddcd1f0425ed018d9ff8f9701e1ab717d5416e22a102298f8130ff2c2bae2e3",
+          "bytes": 3616
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:10:35.430714+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "9490c3df6d404657b284293c2759bf855b5e60d9217934862bab2f42a49a8bc8",
+          "bytes": 1182
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:10:35.474810+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "6a14f94c6e0e9be943b19f20c7570922815777f062b3d182769c82d67f963013",
+          "bytes": 7738
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:13:19.503878+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "reviewer-packet.md",
+          "sha256": "5e8178f580698214eda1e97652fa1f881b01aa23935908f6e6c76d8a5a23ec0a",
+          "bytes": 4840
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "573cd158bdc1b0f401cec3eb570c9f9e74b64e9f9b6b7d9e38651c7e0390e857",
+          "bytes": 10278
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T05:14:27.373685+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "9387165602e5cc351c99b461f0b54f2873228f150b1707e17733144139e8310e",
+          "bytes": 4745
+        }
+      ]
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T05:14:31.840398+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "010209de1860d23a0fb5eb725a011ddb90c74ff75e3c5f998f35ad589385bfba",
+          "bytes": 10756
+        }
+      ]
+    }
+  ]
+}

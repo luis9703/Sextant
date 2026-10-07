@@ -1,0 +1,59 @@
+{
+  "contract_version": "0.2.0-alpha.5",
+  "created_at": "2026-10-02T06:23:44.721813+00:00",
+  "topic": "十五年内，手机空间扫描更便宜易用后对普通生活与行业的条件性变化；有界首轮组件试跑",
+  "profile": "brief",
+  "token_target": null,
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T06:24:23.804584+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "records/01-frame.md",
+          "sha256": "345e4aac05aff754351b7f34484516a1af08ae7cc93866981e453802442dee63",
+          "bytes": 820
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T06:24:23.843091+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "records/02-foothold.md",
+          "sha256": "5101b932e5f7c5c514460114fe64fcb99e459fdb70283669db60b4fb8e271fca",
+          "bytes": 1264
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T06:24:23.882016+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "candidates.md",
+          "sha256": "9f37008d698bd6c20c79a36ae6587bd8ee875b6bf00ae55db8de17f3b67fbaa3",
+          "bytes": 1872
+        }
+      ]
+    }
+  ]
+}

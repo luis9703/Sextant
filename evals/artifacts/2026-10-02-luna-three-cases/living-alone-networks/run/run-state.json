@@ -1,0 +1,145 @@
+{
+  "contract_version": "0.2.0-alpha.2",
+  "created_at": "2026-10-02T05:09:36.474233+00:00",
+  "topic": "未来十五年的独居、非婚伴侣、家庭与社区",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:09:43.912669+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "22e18e5022bddd611ca0d7df5be97f11ece53785587caddf901f531b24851ded",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:09:49.673809+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "471a13a27ede5c4cbac201da03acc11178a959890a75f7b7f843f018dce3375c",
+          "bytes": 397
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:09:57.206933+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "6b4c6ec24754be8c33f0d178da8e9fc13e45b81c4ca4e4e1867636a705925a1e",
+          "bytes": 1000
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:10:21.485284+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "494949983c3e6a38ec137b2ba0724d567a7bade2b2273f23b0de6a461a9bac1c",
+          "bytes": 2218
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:10:29.347701+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "a2408a1060db42872278ebae7119b99ad2ba249ea1670c96bdf8581195fed73a",
+          "bytes": 1257
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:10:47.712952+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "6bdca113c44e7a0163188b77096ea0c9a1deb7817cd69009df80c64c578bad1c",
+          "bytes": 4247
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:13:19.806037+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "review-packet.md",
+          "sha256": "7cfc3c1ebefd1359ba8db4138e62891b0caa5f01dbb0fbacd5c4892d9e43897a",
+          "bytes": 4084
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "c334af5fd7f7d4c1ba7bd88e42c6f16fdbb56bacb08e1b12e80c932911f0fb73",
+          "bytes": 7142
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T05:13:56.965355+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "8f8568ca4b06c23c436b178b7397c92b7f7143e09d51e1623e9fee4d4df482bb",
+          "bytes": 2880
+        }
+      ]
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T05:14:29.236397+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "93931a9bac25fb13b209d6ff192cec4bb640a8906a8c093b810aede46a946597",
+          "bytes": 8725
+        }
+      ]
+    }
+  ]
+}

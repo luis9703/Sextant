@@ -1,0 +1,134 @@
+# Neutral review packet
+
+## Problem and scope
+
+User request: “感觉实时翻译越来越好了。如果未来我可以用中文和世界各地的人直接交流，跨国协作、语言学习和人的关系会变成什么样？帮我想象一下未来十年。”
+
+Information cutoff: 2026-10-02. Horizon: 2026–2036. Scope: a Chinese speaker's connections with people globally, including work, learning, interpersonal relationships, communities and people who do not adopt. Futures may coexist; there is no numeric adoption forecast or scenario probability. Fictional scenes are illustrations. Current availability of a product does not establish universal accuracy, regional access, adoption or social outcome.
+
+## Review task
+
+Perform both grounding and creative challenge in this new context. Review the neutral candidate content below, its assumptions and source limitations. Identify concrete factual contradictions, sources that fail to support a premise, missing transitions, distinct conditions accidentally conflated, cultural overgeneralization, alternative causal explanations, and observations that do or do not discriminate them. Distinguish actual contradiction from an explicit speculative condition.
+
+For the creative challenge, examine whether one explanation dominates the candidates, whether a current interface constraint has incorrectly become a general limit, whether desire/identity can change through use, and whether a worthwhile failure or alternative is only mentioned without development. Propose concrete repairs or alternatives where useful; no novelty or optimism is required. Give issue-specific dispositions and unresolved limits. Do not infer a preferred answer. A fluent pathway is not an expert evaluation, and a shared model/source is not independent factual corroboration.
+
+If checking a new factual lead, preserve a readable link and its scope; reviewer recollections alone remain unverified. Do not claim to have read inaccessible material. Stay within the question and cutoff. Return actual review findings, not a rewritten verdict designed to approve the draft.
+
+## Source trail and qualifications
+
+- [Apple AirPods Live Translation support](https://support.apple.com/en-mide/123185), dated 2026-09-14; requirements, downloaded language models, local processing, two-person interaction and inaccurate-output footnotes were read. Vendor capability/operation source, not measured quality or global regional availability.
+- [Google Meet business speech-translation announcement](https://workspaceupdates.googleblog.com/2026/02/speech-translation-meet-ga.html), dated 2026-02-04; launch availability and limitations were read. Language pairs/hardware limitations are launch conditions, not verified unchanged October conditions.
+- [Google Research real-time speech-to-speech translation](https://research.google/blog/real-time-speech-to-speech-translation/), dated 2025-11-19; architecture, time-synchronized data and lookahead discussion were read. Internal delay is distinct from inference/end-to-end latency. Vendor account; no latency figure is used as a future prediction.
+- [Hohenstein et al. arXiv v1 full text](https://arxiv.org/html/2102.05756v1), dated 2021-02-10; results, methods and limitations were read. Anonymous one-time desktop text task with smart replies, not translation or long-term intimate relationships. Suspected use/negative evaluation is correlational, actual smart-reply use findings use experimental encouragement/IV identification. [2023 journal version](https://www.nature.com/articles/s41598-023-30938-9) redirected to an inaccessible authentication service; [NSF backup](https://par.nsf.gov/servlets/purl/10463193) returned 502. Journal changes not rechecked; use v1 qualifications.
+- [Council of Europe CEFR Companion volume official overview](https://book.coe.int/en/education-and-modern-languages/8150-common-european-framework-of-reference-for-languages-learning-teaching-assessment-companion-volume.html), 2020; description/table of contents read, not full book. Establishes existing mediation/online interaction/plurilingual frameworks, not adoption or effectiveness.
+- [Te Hiku Kaituhi data sovereignty/security](https://docs.tehiku.media/article/42-data-sovereignty), updated 2025-08-20; storage, processing, explicit training permission and retention details read. Provider self-description of transcription governance, not complete real-time translation or representative community opinion.
+- [IWSLT 2025 evaluation campaign ACL page](https://aclanthology.org/2025.iwslt-1.44/), 2025-07; only abstract and metadata read. Establishes distinct evaluation task types; does not support language-quality rankings or measured trend claims.
+- Closest prior lead: [NBER machine translation and trade](https://www.nber.org/papers/w24917), 2018-08. Indexed abstract appeared in search, direct HTML repeatedly returned 403 and [PDF](https://www.nber.org/system/files/working_papers/w24917/w24917.pdf) could not be opened. No reported numeric trade effect is used in the draft; full causal design was not verified. It is a prior-account lead rather than independent validation.
+
+Consequential unknowns: cross-year quality comparisons, Chinese/low-resource real-world reliability, low-income and disabled-user experience, longitudinal workplace power, learning and relationship outcomes. Sources support stated footholds, not a guarantee about futures. There is no exhaustive novelty search.
+
+## Candidate content for review
+
+# Conditional futures, 2026–2036 — pre-review pathway draft
+
+如果中文能成为你连接世界的日常入口，未来生活可能出现几种并存的变化：工厂技师直接听见海外使用者的抱怨；外语课从“以后用得上”变成“我想和这个人更好相处”；朋友共同决定哪些话让机器帮忙、哪些话宁可慢慢听；一座社区既用自己的语言参与公共事务，也能决定哪些故事只在内部流传。与此同时，能连接的人增加，不保证你遇到的人更不同；顺畅的翻译也可能把一个陌生的人改写成你习惯听的声音。
+
+以下为条件路径，不是“十年后一定如此”。产品资料表明部分翻译形态已经可用；没有支持所有语种完美、全球可达或长期社会成效的证据。中文使用者能否在某地区使用某产品另有设备、服务和地域条件。十年分段表达需要怎样的先后变化，不是为每个变化承诺日期；路径可能在某地区快速出现，在另一地区长期停滞。场景均为虚构插图。
+
+## P1 — 知道现场的人走到国际桌前
+
+**虚构场景。** 一位中文维修技师与西语客户一起看同一台机器。客户说“这一声响让我不敢继续开”，技师用中文解释振动来源。过去由双语经理摘要转述的问题，此刻可以被细问。会议末尾经理仍签交付承诺，技师不因开口就被迫承担全部合同责任。
+
+常规基线是会议翻译帮既有团队沟通。本路径的实质变化是：拥有经验但不掌握共同语言的人是否获得直接提出问题、验证和影响决定的权利。今天一个语音接口开放，并不等于组织会开放这些权利。[Meet 发布说明](https://workspaceupdates.googleblog.com/2026/02/speech-translation-meet-ga.html)仅证明一种带资格条件的接口；英语中心语言对是发布时限制，不是未来物理边界。
+
+**条件序列。** 在十年的前段，风险有限、术语可验证的合作先用翻译做样品讨论、维修演示或创意交流；参与者可以复述关键结论，遇到低置信内容改成图像、文字与人工解释。中段只有在组织愿意让专业人员加入、并明确谁可确认事实与谁可承诺时，直接协作才可能替代部分转述链。后段若这种方式被反复证明有用，招聘可更多试做任务而少以口语流利度筛选；但本轮未验证该招聘改变。
+
+**行动者和反馈。** 技师想被理解，客户想解决问题，管理者想控制风险和成本。直连暴露信息删减后，团队可能把双语人员转到文化调解、争议处理与复杂语义校验；他们也可能维护旧审批体系。现场知识得到认可，可鼓励更多直接参与；参与扩大又使授权、证据与责任成为新瓶颈。
+
+**两条利益分支。** 劳动者可因直接展示能力获得议价空间；也可能因雇主能在更大地域选择而面对更多竞争。哪条出现依赖劳动制度、技能稀缺、资格、付款和跨境限制，不能从翻译速度推导。翻译释放语言障碍，时区、实体维修、信任、制度差异仍能阻断项目。高风险事项不是取消人工解释或合规要求的理由。
+
+**必要与替代条件。** 必要：特定任务的翻译足够可核查，组织允许相关人参与，能用另一渠道修复误解。个人拥有最新耳机不是必要条件；办公室公共终端、文本/图像共享与人工双语伙伴都可能提供入口。机构可只把低风险互动开放，保留专业审核；并非必须全面自动化。
+
+**区分观察。** 可在授权的试点记录“原本因语言未参与的人是否持续参与”“关键决定由谁提出、谁签署”“返工由语义还是授权/流程错误引起”，用匿名访谈与会议/任务记录交叉判断。参与上升也可能来自管理改革或远程协作习惯；单看会议数量不支持权力改变。若工具使用增长但决定权始终集中，削弱本路径的权力重分配版本，仍支持辅助沟通版本。跨地区工资数据受许多因素影响，不能当作翻译造成议价变化的独立判据。
+
+## P2 — 朋友共同约定“翻译到什么程度”
+
+**虚构场景。** 你与一位土耳其朋友说起争吵。屏幕把直白的话译得很圆润；对方问“这是你的原意，还是它帮你变温柔了？”你们开一个简朴模式：保留停顿和不同意见，陌生词旁边只加解释。生日祝福可以授权润色，冲突对话只做转译；无需为每一次亲密交流保存永久档案。
+
+最近的现有讨论是 AI 介入沟通可能影响对人的评价。可读的 [Hohenstein 等 2021 全文](https://arxiv.org/html/2102.05756v1)研究一次匿名文字任务中的 smart replies；它不能证明跨语言朋友会接受哪种披露，更不能证明怀疑与负面评价的相关关系是因果。此处把真实性规范视为待探索的制度，而非已知人性定律。
+
+**条件序列。** 首先翻译让原本难建立的关系得到第一次对话机会。日常频繁使用后，有些关系发现系统改变礼貌、幽默或冲突程度，有些关系则认为帮助很贴心。若双方能看见并选择中介的范围，可能出现按情境约定的翻译形式：只译意思、保留原词、解释典故、授权重写，或临时关闭。长期的反馈可能改变人对“亲自说”的理解：真实性来自负责并愿意解释自己的意思，而不一定来自完全没有工具。
+
+**另一条同样需发展的分支。** 如果服务主要优化“让接收者感觉舒服”，又不显示其改写，双方可能分别爱上被系统加工后的表达习惯。关系不必突然崩塌；它可能变成依赖某一服务才能运转的关系，换平台或面对面交流时需要重新学会相处。语义争议也可能被推给机器，使人逃避负责；或者双方把机器错误视为共同要修复的问题。这两种归责方式会强化不同关系。
+
+**欲望与新瓶颈。** 有人想表达准确，有人想避免尴尬，有人想听见另一个人的陌生性。双方偏好也可能不一致：一人要忠实，一人要礼貌。新的稀缺可能是彼此愿意澄清、容忍不顺滑与承担自己的表达，而不是能否实时转成另一种语言。
+
+**条件与边界。** “翻译忠实到什么程度”需要可观察的选择和双方同意；真实产品未必提供。简单转译不必改写人格，故不能把所有自动翻译混为代写。保留原文便于检查，也会带来记录与隐私成本；可用当场解释、短期删除或第三方调解替代长期录音。离线处理可减少某类数据外流条件，不能自动解决信任或误解。[Apple 操作页](https://support.apple.com/en-mide/123185)支持一种本地处理形态，不支持人际成效。
+
+**区分观察。** 关系访谈可问“你们何时主动关闭或切换模式、谁有选择权、发生误解后如何修复”；有明确同意的重复交流研究可比较模式选择与关系感受变化。主动切换也可能只是噪声、费用或设备不便；必须询问原因。若关系稳定且大多数人不在意是否使用翻译，削弱“边界契约成为显著需求”的分支，不否定翻译帮助建立关系；若只见评分变高，不能推导真实亲密增加。
+
+## P3 — 先遇见一个人，再学他的一部分语言
+
+**虚构场景。** 你因为共同喜欢修复旧物，和一位巴西朋友每周做项目。起初都靠翻译。半年后你会说的葡语仍不多，却能不用工具分辨他那句“好吧”是答应还是勉强，能听懂项目里几个彼此开玩笑的词。你继续用机器处理说明书，同时自己练一些重要对话。
+
+常规基线是外语学习仍服务旅行、工作、考试和身份，而机器处理日常字句。实质变化可以是学习次序：交流机会不再只在学好以后发生，实际关系先出现，再产生具体学习需求。它也可能增强学习动机；不能只推演学习需求下降。[CEFR 官方说明](https://book.coe.int/en/education-and-modern-languages/8150-common-european-framework-of-reference-for-languages-learning-teaching-assessment-companion-volume.html)表明多语与调解本已进入语言教育框架，这不是新发明，也不证明全球教育会转型。
+
+**条件序列与制度过渡。** 前段某些用户减少为了单次旅行背通用短句的投入，同时另一些用户因直接结识朋友而想学；两个现象可同存。中段老师可把真实任务、语境解释、核对译文、修复误解与聆听差异纳入学习。如果考试和招聘仍奖励可独立使用外语，系统性课程不会仅因工具变好而更换。后段只有评估、资源、师资与家长期待逐步改变，语言课程才可能从单一熟练度目标分化为专业语言、文化参与、关系实践和独立能力。
+
+**反馈与人如何改变。** 初始目的只是解决问题，熟悉具体人后可能想听其原声、理解笑话或参加家庭聚会；这些动机不是假设所有人热爱异文化。也有人把翻译当消费服务，完全不学，关系照样有效。另有人担心依赖而加倍投入外语，或把不用翻译视为身份和地位。新瓶颈是投入注意力、练习机会及能否承受尴尬，不是词典访问。
+
+**失败和替代。** 若平台接触缺少持续关系，学习动机分支可能不开启；若设备在考试、工作或移民情境不可用，独立语言需求仍强。混合路径不需要“人人不学外语”，也不需要全球考试改革：社区项目、朋友互教与现有学校内的局部课程就可能先形成。这里没有外语总需求或就业的定量预测。
+
+**区分观察。** 学校/课程可区分报名目的、学习者是否先有跨语关系、长期学习行为、哪些能力被评估；在获得同意的学习者访谈里追踪“工具使用→建立关系→开始学习”的时间顺序。报名变化也可能来自考试政策、收入或人口变化，不能只看语言 App 下载量。若接触翻译很多但少有持续学习，削弱关系引出学习分支；若考试培训保持强劲，也不推翻私人学习形式变化。原声理解与幽默能力不宜仅靠用户自评判定。
+
+## P4 — 一个共同体能决定怎样被世界听见
+
+**虚构场景。** 一处图书馆的多语活动不要求每个人有订阅耳机。桌上有共用显示、按需语音和人工协助。当地社群决定一个难译的亲属词保留原词，添共同认可的解释；一些仪式故事允许当场解释，但不进入外部模型训练。年轻成员也有渠道反对过严的封闭规则。
+
+常规基线是大平台扩展语种。另一条机制是共同体提供入口并制定资料与概念的规则。现实近邻是 [Te Hiku 的 Kaituhi 数据说明](https://docs.tehiku.media/article/42-data-sovereignty)：这是机构自述的语音转写治理实践，不能当作实时翻译已经实现，也不能代表所有小语种。它使“谁控制语料”成为可想象的行动，而不只是一项末尾风险。
+
+**条件序列。** 先由愿意参与的社区与语言工作者明确某些资料的使用权限，并建立可纠错的词汇与解释；选择“开放哪些内容”不要求所有故事都公开。若稳定维护经费、可用模型及服务入口存在，公共空间可把语种覆盖与数字可达性组织成服务。后段若多个社群需要交换，可能形成带授权条件的互联转译与解释，而不是一份无条件汇入最大平台的资源池。此互联仍是推测性制度提案，没有验证它将出现。
+
+**欲望、权力和反馈。** 长者可能想保存语境，青年可能想更广参与，迁居者想接近原社群，外部研究者想获得数据；共同体不是意见一致的单一人。成功的服务可增加用母语完成公共事务的机会，反过来带来更丰富的表达和资料；如果只有对外翻译而减少内部使用，也可能让语言成为展示品。模型覆盖不等于语言活力。
+
+**必要和替代条件。** 公共入口需要可维护技术、人手、资金、权限治理与公平访问；不是每个成员购买旗舰设备。可从文字、异步解释或人工共同主持开始，不要求即时口语完美。少数语言的模型质量差异属于经验/资源条件，而非所有语言必然无法机器翻译的硬限制；也不能把“未来会更好”用作无证据保底。
+
+**类比与失败分支。** 把翻译当公共供水的结构类比是：集中维护使个人不必各买完整设施；映射的界限在于水质可有相对统一标准，而意义、禁忌和成员权限会持续争议。公共机构若强制持续收音，服务会变成门槛或监控；共同体拒绝时，按场景开启的人工/离线服务是另一形式，而不是把拒绝者当落后。内部守门人也可能排斥弱势成员，需要异议与退出渠道。
+
+**区分观察。** 查公共服务采购/管理规则、谁实际决定训练授权、纠错是否生效、无个人订阅者能否持续参与。当地语言在家庭、活动、公共事务中的使用由社区自愿调查，不从模型语种数直接推导。使用增长可能来自文化资助或人口结构；若只增长外部展示内容而内部使用下降，削弱“活力循环”，不必否定对外访问价值。没有当前全球可比数据可以直接评估这一链条。
+
+## P5 — 国界淡了，圈子的边界可能更厚
+
+**虚构场景。** 你参加一个来自六地的线上园艺社群，每个人说自己的语言。每天聊得很舒服，却很少听到与成员经验相反的声音；另一个由共同解决水资源问题组织的交流计划则要求不同生活处境的人共同完成任务，会议没那么顺滑，关系反而慢慢扩大。
+
+基线是跨国兴趣群与推荐系统已经存在；翻译扩大潜在关系集合。实质差异来自怎样分配注意力与相遇：同质推荐可把人按兴趣、信念甚至表达风格跨国聚集；共同任务与主动寻找差异可形成另一种国际联系。没有证据证明所有平台都会按同一种目标组织人。
+
+**条件序列。** 前段翻译让没有共同语言的人进入相同内容与活动。中段如果平台以留存、冲突刺激或相似喜好分配接触，熟悉感和成员规则可强化边界；如果以持续共同任务和安全讨论规则组织相遇，差异可逐渐被理解而不只是被翻译。后段可能出现跨国但同质的“岛”，也可能出现能够承受不同意见的跨国公共空间；同一用户在不同空间可同时经历两者。
+
+**反馈与新稀缺。** 推荐吸引谁，谁又决定群体愿意听什么；群体规则可能迫使新成员适配主流语境。共同任务则为误解提供修复动机，形成共享经验，但不能保证冲突消失。关键瓶颈转成注意力、参与规则、成员安全与投入时间。说得通可以使合作和争吵都更密集，而非自动让世界更友好。
+
+**分支条件。** 同质岛需要接触选择持续偏向相似与群体排斥机制；差异空间需要足够重要的共同目标、主持/修复资源与退出权。二者都不需要某一种特定耳机，也不要求所有语言零错误；翻译可以从字幕和异步交流开始。若核心政治或利益冲突无法协商，准确翻译可更清楚呈现分歧；那是本路径的停滞点，不是技术失效。
+
+**区分观察。** 平台公开指标若能提供语言/地理分布，只支持跨域接触；要判断边界还需自愿社群样本中的意见差异、谁发言、谁退出、是否开展共同任务。跨国人数上升可能只因平台扩张；言论更相似可能因共同经验而非算法筛选。若新接触长期包含差异且成员可安全争论，削弱同质岛分支；若多样成员来了却快速退出，削弱差异公共空间分支。意见多样性缺统一可靠公开测量，本轮不构造一个虚假分数。
+
+## P6 — 翻译是脚手架，关系也会长出自己的语言
+
+**虚构场景。** 一群中文、西语与阿语使用者一起演练音乐。翻译在合奏时跟不上；他们逐渐用手势、敲击、图谱和几个借来的词交流。工具仍用于安排活动，但某个只有他们知道的词成为关系的一部分。另一群人在完全能翻译时仍保留小段不译的笑话，邀请新成员慢慢学，而不要求每句话立刻进入统一表达。
+
+常规基线是人能用多种方式合作。这里的变化是：首次跨語联系的进入条件降低，但后续身份不必永久依赖完整逐句翻译。失败并非只使人退回英语，也可能激发更慢、更多模态或局部混合的共同实践。不是预测新全球语言必然出现。[Google 技术说明](https://research.google/blog/real-time-speech-to-speech-translation/)的上下文与延迟权衡提供设计边界线索，不验证社会创造结果。
+
+**条件序列。** 前段翻译帮人确认“愿意一起做”；共同活动反复发生后，具有可感知结果的任务让动作、物件和少量词产生共享指向。持续的误解修复可能沉淀局部表达，成为身份线索；群体再决定哪些场景继续翻译，哪些靠共同实践。若工具日后改善，共同表达不必消失，因为它可能已具有归属意义。
+
+**失败生成的完整分支。** 如果没有稳定共同任务与修复意愿，翻译失败只会让人离开，不能靠浪漫叙述救回来。若群体愿意共同练习，技术的限制会转成成员共同承担的缓慢过程；关系的质量也许来自反复互教，而非节约的时间。另一方面，共同词可能变成排外暗号，使新人很难加入；群体需要解释、带新人与可退出选择，才有开放版本。
+
+**必要与替代条件。** 必要：重复交往、共同目标、可修复的任务和允许不流畅。音乐不是唯一形式，手作、体育、共同照护或游戏都可能，但其各自可达性须另查；听力、视力或动作差异会改变媒介，不能认为手势人人可用。路径不要求技术持续低质；主动关闭也能触发。私人空间限译的正当边界与公共场合排斥不同，不假定“关翻译”总是好事。
+
+**区分观察。** 有同意的社群记录可追踪共享词/动作是否重复使用、实际任务如何完成、设备改善后是否仍保留、加入者是否得到解释。停止翻译也可能由断网、费用、共同语言进步解释；只看关机率无辨别力。若共同实践在工具恢复后立即消失，削弱其身份沉淀分支；若能持续而新人难融入，支持局部身份形成，却挑战开放关系版本。词语是否构成一门新语言没有在本轮定义，不作计数预测。
+
+## Ten-year horizon and shared limits
+
+2026–2029 可想象的过渡重点是“哪些具体任务足够可用、谁愿意采用、如何修复”；2030–2033 若前提成立，组织、课程、关系规则与公共入口可反过来影响产品设计；2034–2036 的深层变化可能是新身份与新的参与规则。此分段是叙事脚手架，阶段可重叠或十年内根本没发生。供应商提供一个功能、得到熟练翻译、信任其运行与制度扩散是四种不同事件。
+
+这些路径不能加总成概率。它们的交叉值得关注：P1 的直连工作可以引出 P3 的学习；P2 的关系边界可支持 P6 的共享表达；P4 的公共入口可能让原本被设备条件排除的人进入 P5。反过来，平台的封闭协议、机构责任或群体排斥也可能阻断这些交叉。
+
+当前证据最能支持的是“部分跨语接口已提供且受条件约束”“教育与数据治理已有不同于逐词翻译的现有框架”。人的长期关系、集体身份、劳动权力与教育转型都是待观察的条件推论。来源支持前提，不承诺未来。尚未覆盖临床、法律、残障语言使用的专业验证，不据此给自动翻译替代专业服务的建议。本稿待新上下文 grounding 与 creative challenge，未登记 review、reconcile 或 deliver。

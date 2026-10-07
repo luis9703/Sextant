@@ -1,0 +1,499 @@
+{
+  "contract_version": "0.2.0-alpha.6",
+  "created_at": "2026-10-02T11:59:55.909188+00:00",
+  "topic": "假如未来越来越多人选择每隔几年重新学习、换一种职业和生活方式，社会会怎样演化？",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T12:00:41.337997+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "b062b836cd470bd96290644ed43012096c912280dd349ad9e33fbb033adba3da",
+          "bytes": 1748
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T12:01:03.056519+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "6ea8c42abebef7007789550d8b9e86c5baac247224deb45affb74e6a621ea479",
+          "bytes": 1549
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T12:02:20.718874+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "d6c7918ca462a05f09d937a775e8017809a53a5a202667dd9412578e8470572e",
+          "bytes": 4953
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T12:05:16.827909+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "b6f5fa5bf07f4229e383eafd30aaeae3a06f5c7b3bb0c989a78c36fdad195324",
+          "bytes": 8693
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T12:07:12.727158+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T12:16:26.989335+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "955044b648200b1c2fa5c47c013f4b5eaabb12b0256ad92eae144f4e5f47dc87",
+          "bytes": 14669
+        },
+        {
+          "path": "source-addendum.md",
+          "sha256": "b0032988dcc06c2fdcff0af3467cda180745c959d3358db366cf819d8bc7e282",
+          "bytes": 1030
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T12:24:38.361251+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "review/neutral-packet.md",
+          "sha256": "df17b87936201a8ac5816ef8f3e46f95fdcacb093ae2be5c884259340828c157",
+          "bytes": 16127
+        },
+        {
+          "path": "review/neutral-choices.md",
+          "sha256": "3529f38a25c543ecf9477381940dcf591b0f6a75b4c981fb635d42cb1299fb0f",
+          "bytes": 7296
+        },
+        {
+          "path": "review/neutral-evidence.md",
+          "sha256": "d655711ed3b32b49af634566aa13ecc8bb732eeebfa2b32ac2704fb53c8878d0",
+          "bytes": 7846
+        },
+        {
+          "path": "review/neutral-group-world.md",
+          "sha256": "f6baa12a731be1a038fbac810de215b81615f79d0da0be05b7cda4310c656e33",
+          "bytes": 3368
+        },
+        {
+          "path": "review/07-review.md",
+          "sha256": "a33c5cf326a84ee130cf8035aa2ed113af27b5ee56fefd4437cb71d35f582b7a",
+          "bytes": 17445
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T12:34:47.208404+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "66f629152a9dba21820ea6461c7bc4f77ec2d6331d16d7663f992a1f0ca9ab1c",
+          "bytes": 11159
+        },
+        {
+          "path": "post-review-source-notes.md",
+          "sha256": "68f4b72916edcfee52604fe73814ffdbdf5b37790f0cc439712e43c23b5fe051",
+          "bytes": 1072
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "6264398c58fd7fc365cfe6677ebfc2521876469ed5a035074dd70980be86bd52",
+        "bytes": 21891
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T12:35:09.881334+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "6264398c58fd7fc365cfe6677ebfc2521876469ed5a035074dd70980be86bd52",
+          "bytes": 21891
+        }
+      ]
+    }
+  ],
+  "work_required": [
+    "evolution",
+    "contrast"
+  ],
+  "work": [
+    {
+      "id": "cycles-e1",
+      "kind": "evolution",
+      "question": "在生活保障与可回归入口假设成立后，家庭的第一次与第二次重启怎样改变机会承诺和年龄权威？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:07:37.131645+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:08:26.737608+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/cycles-e1.md",
+              "sha256": "6276d2753f36d3276284b86efa9d4ab34488625f24cc37bd03c5f88e8b09d034",
+              "bytes": 3681
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anchors-e2",
+      "kind": "evolution",
+      "question": "在技能认可与带薪实践成立后，流动者和长期专家反复交接怎样改变组织忠诚、知识与权力？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:07:37.170490+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:09:21.569536+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/anchors-e2.md",
+              "sha256": "b6458628c501eef04388b57d8e5430328e95545c77cdcc42c2d74755f7e426f5",
+              "bytes": 3586
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "choices-c1",
+      "kind": "contrast",
+      "question": "同样希望获得可持续生活时，照护者、无缓冲雇员、专业留守者与有缓冲者为何选择试做、转行、留下或拒绝？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:07:37.209836+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:10:18.815714+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/choices-c1.md",
+              "sha256": "bc4cdf298a957d17839af10c985c4f7a9a0d958f6ae5b468791ac3d8c0925537",
+              "bytes": 4471
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "failure-e3",
+      "kind": "evolution",
+      "question": "若补助购买课程却没有认可入口，资格循环发生后如何产生有代价的共同留下路线，而不只是风险脚注？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:07:37.248907+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:11:17.822067+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/failure-e3.md",
+              "sha256": "c5ea778dbb969864dd3379f233181da90a7200d3cac726f66716c90ed1da5c39",
+              "bytes": 4192
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "civic-e4",
+      "kind": "evolution",
+      "question": "假如人能维持部分收入并学习参与公共生活，反复转换怎样改变地方归属、迁居与不披露过去身份？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:07:37.288431+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0937a84fc8035226f90853dbfa535518cb8d526ae0f6b59894717b4a79ae8666",
+          "bytes": 9256
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:12:20.508955+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/civic-e4.md",
+              "sha256": "b4a7faa9f382275e3667755ffc91acf6cfc9d7f7861e0e2fb3fed177e9275666",
+              "bytes": 4080
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "place-c2",
+      "kind": "contrast",
+      "question": "同一地方维护项目怎样让固定居民、阶段居民、访客与无法移动者选择不同参与？何种条件使迁居或责任发生反转？",
+      "priority": 1,
+      "after": [
+        "civic-e4"
+      ],
+      "created_at": "2026-10-02T12:12:20.555645+00:00",
+      "inputs": [
+        {
+          "path": "work/civic-e4.md",
+          "sha256": "b4a7faa9f382275e3667755ffc91acf6cfc9d7f7861e0e2fb3fed177e9275666",
+          "bytes": 4080
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:13:39.622553+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/place-c2.md",
+              "sha256": "8a0501966671abe5cc48fe5c1bdde9a66d334c66c3f3b223ab104826232dd9a2",
+              "bytes": 3186
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-e5",
+      "kind": "evolution",
+      "question": "无能力一起离岗的人分批共同学习并改变本地生活供给后，会形成什么新生活及退出冲突？",
+      "priority": 1,
+      "after": [
+        "choices-c1",
+        "failure-e3"
+      ],
+      "created_at": "2026-10-02T12:12:20.600164+00:00",
+      "inputs": [
+        {
+          "path": "work/choices-c1.md",
+          "sha256": "bc4cdf298a957d17839af10c985c4f7a9a0d958f6ae5b468791ac3d8c0925537",
+          "bytes": 4471
+        },
+        {
+          "path": "work/failure-e3.md",
+          "sha256": "c5ea778dbb969864dd3379f233181da90a7200d3cac726f66716c90ed1da5c39",
+          "bytes": 4192
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:13:39.705839+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/group-e5.md",
+              "sha256": "7dfba3b23f187782b6c580869e565593dcbf1195c71e5d14e931a95d40d936ed",
+              "bytes": 3409
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "care-time-e6",
+      "kind": "evolution",
+      "question": "在专业供给和启动缓冲存在的假设下，首批稳定工作如何释放下一批所需连续学习时段？协调者退出和照护需求增长后怎样分担或缩减？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:25:33.307740+00:00",
+      "inputs": [
+        {
+          "path": "review/neutral-group-world.md",
+          "sha256": "f6baa12a731be1a038fbac810de215b81615f79d0da0be05b7cda4310c656e33",
+          "bytes": 3368
+        },
+        {
+          "path": "review/07-review.md",
+          "sha256": "a33c5cf326a84ee130cf8035aa2ed113af27b5ee56fefd4437cb71d35f582b7a",
+          "bytes": 17445
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:26:44.482729+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/care-time-e6.md",
+              "sha256": "f2fcd5557d668d4da17c7ec532348916d65f29827fd38767b392cf4cc053c2a5",
+              "bytes": 4810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belonging-e7",
+      "kind": "evolution",
+      "question": "禾雨有替补可用、想暂停维护并留下居住，第一次与第二次暂停如何改变归属、声誉、决定权与责任连续？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:25:33.349050+00:00",
+      "inputs": [
+        {
+          "path": "review/neutral-packet.md",
+          "sha256": "df17b87936201a8ac5816ef8f3e46f95fdcacb093ae2be5c884259340828c157",
+          "bytes": 16127
+        },
+        {
+          "path": "review/07-review.md",
+          "sha256": "a33c5cf326a84ee130cf8035aa2ed113af27b5ee56fefd4437cb71d35f582b7a",
+          "bytes": 17445
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:27:57.244502+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/belonging-e7.md",
+              "sha256": "50020ea63b4801c0c02ca7bf8716015f64ec97ea54efcc3cbfbc2a70d2d717c1",
+              "bytes": 4897
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrangements-c3",
+      "kind": "contrast",
+      "question": "控制相同服务需求/资源时为什么选择自建共同供给、联合购买、普通服务或不参加？控制相同替补时暂停归属、持续贡献与付费服务如何改变不同人的选择？",
+      "priority": 1,
+      "after": [
+        "care-time-e6",
+        "belonging-e7"
+      ],
+      "created_at": "2026-10-02T12:27:57.285712+00:00",
+      "inputs": [
+        {
+          "path": "work/care-time-e6.md",
+          "sha256": "f2fcd5557d668d4da17c7ec532348916d65f29827fd38767b392cf4cc053c2a5",
+          "bytes": 4810
+        },
+        {
+          "path": "work/belonging-e7.md",
+          "sha256": "50020ea63b4801c0c02ca7bf8716015f64ec97ea54efcc3cbfbc2a70d2d717c1",
+          "bytes": 4897
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:29:13.306459+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/arrangements-c3.md",
+              "sha256": "bcd8d79454ae48f0044509efb52aef64be71b33b9d9d93ae11f5c4a7b2d0beed",
+              "bytes": 4988
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

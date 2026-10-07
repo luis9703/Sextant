@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-02T12:35:09.972795+00:00",
+  "profile": "deep",
+  "state_fingerprint": "8aa67ca680694bdc3d06216db194a7d4dcd85496e1116b3522fe295d73d690e2",
+  "structural_status": "pass",
+  "recorded_phases": 9,
+  "missing_phases": [],
+  "partial_phases": [],
+  "artifact_errors": [],
+  "development_work": {
+    "required_kinds": [
+      "evolution",
+      "contrast"
+    ],
+    "missing_kinds": [],
+    "pending_ids": [],
+    "completed_ids": [
+      "cycles-e1",
+      "anchors-e2",
+      "choices-c1",
+      "failure-e3",
+      "civic-e4",
+      "place-c2",
+      "group-e5",
+      "care-time-e6",
+      "belonging-e7",
+      "arrangements-c3"
+    ],
+    "quality": "not established by the queue"
+  },
+  "token_target": [
+    50000,
+    100000
+  ],
+  "measured_token_usage": null,
+  "usage_status": "unknown; consult host telemetry separately",
+  "semantic_status": "not established by this script",
+  "scope": "Checks recorded order and artifact integrity; not source truth, actual isolation, creativity, or model compliance outside this helper."
+}

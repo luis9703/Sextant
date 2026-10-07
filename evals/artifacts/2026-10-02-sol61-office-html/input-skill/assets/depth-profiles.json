@@ -1,0 +1,26 @@
+{
+  "contract_version": "0.2.0-alpha.5",
+  "default_profile": "deep",
+  "phases": ["frame", "foothold", "diverge", "research", "recombine", "pathways", "review", "reconcile", "deliver"],
+  "profiles": {
+    "deep": {
+      "token_target": [50000, 100000],
+      "resource_policy": "Make generation, recombination and pathway development the primary discretionary effort. Use research to supply enabling material and check consequential premises; do not let exhaustive tracing or procedural prose displace imagination.",
+      "breadth_prompts": ["capability migration beyond the current use", "complementary changes and enabling thresholds", "new desires and identities", "structural analogies and their limits", "feedback and new scarcity", "backward bridges and alternative paths"],
+      "review": "fresh-context grounding and creative challenge when available"
+    },
+    "extensive": {
+      "token_target": [100000, 200000],
+      "resource_policy": "Complete deep work, then use additional capacity for independent candidate generation, unfamiliar source domains, branch development, comparison and reconciliation. Add work only while it can change the result.",
+      "breadth_prompts": ["independent alternatives", "cross-domain materials", "heterogeneous people and settings", "branch interactions", "alternative causal models", "unresolved high-impact conditions"],
+      "review": "separate fresh-context grounding and creative challenge when feasible"
+    },
+    "brief": {
+      "token_target": null,
+      "resource_policy": "Only on an explicit user request for a quick or short sketch. Retain local factual qualifications, pathway conditions and honest limitations. Do not claim full-depth completion.",
+      "breadth_prompts": ["different mechanisms", "important assumptions", "what to investigate next"],
+      "review": "state what checking actually occurred"
+    }
+  },
+  "accounting": "The default target ranges are provisional engineering starting points, not empirically validated optima. Set a profile target to null to disable it. Targets describe a planned run-wide envelope, not measured usage, a hard runtime cap or a minimum spend. Do not pad work to reach a token count. Actual input, output, cached input and reasoning counters require host telemetry with its accounting convention; absent telemetry is unknown."
+}

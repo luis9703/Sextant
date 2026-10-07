@@ -1,0 +1,9 @@
+# First divergence (before broad source survey)
+
+Candidates captured before source research; these are exploratory, not ranked.
+
+1. **Nearby chosen-family web.** The main change is relational: a few close friends, neighbors, siblings, or ex-partners become explicit reciprocal kin across separate homes. Ordinary life includes recurring meals, check-ins, emergency keys, care rotations, and negotiated privacy. A possible failure is uneven giving or a move that breaks proximity.
+2. **Shared infrastructure, separate doors.** The main change is spatial and economic: residents retain private rooms/apartments but intentionally share a kitchen, guest room, workshop, garden, or care coordination. This differs from ordinary co-living if residents govern shared resources and duties. It may fail through affordability, conflict, or unpaid labor.
+3. **Portable, mediated support.** The main change is coordination: digital tools and paid local services make flexible, geographically dispersed support easier to arrange. It may extend friendship across moves, but platform access, privacy, dependable human response, and ability to pay remain constraints.
+4. **Kinship rules lag behind life.** The main change is absent: law, benefits, housing contracts, medical decision-making and care expectations continue to recognize spouses/biological family most reliably. People improvise private agreements and friends help, but illness or dispute exposes gaps. That pressure could produce advocacy or retreat toward marriage/co-residence.
+5. **Refusal and selective intimacy.** Some people may pursue quiet autonomy rather than denser communities, accepting professional care or occasional contact while avoiding permanent mutual obligations. A future world must preserve this path as a chosen outcome, not treat it automatically as failed community.

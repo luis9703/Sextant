@@ -1,0 +1,14 @@
+{
+  "LICENSE": "a1db958047e1224fb55b2f626e3d72f16845ba34244f57279e80d38ca912a877",
+  "SKILL.md": "009267434116ef884e19d692472ea83d515a48097439cbdcf6c9e35ba92ea3e6",
+  "agents/openai.yaml": "29512dfbd0291cf0ffde114977afb49f6796ce5f0e67f3fd60e39489034d3547",
+  "agents/workbuddy.json": "ca90a2d81d7bcae1944ab00ebe2531daad4f00d38bb8df23043c6a515990a75e",
+  "assets/depth-profiles.json": "a0c09026526494862663c52167787d361d6121f0de7a43ee05e943d73c28b296",
+  "assets/report-template.md": "ff4c400c2cd535eb5edcbe6d0c6232db91c36e3e811d486f1c7ffd8358b342e1",
+  "references/execution.md": "fc9a5210923ec137adf7108544dbadec632497b7a8e5c7282b824c0233dde3ba",
+  "references/hosts/workbuddy.md": "e2a6314df6d991d02cc5af2b83bb10989b6346502f84d9b0a3d44cd5de3e9104",
+  "references/imagination.md": "98951541b8a866ba17b5a2a0878c297cbbc8b905c22ab61472fba36147c74f0c",
+  "references/research.md": "23a65900fd4c2c6b096dd40029a4f8c583919a61cb1df58fb16636eb2d961760",
+  "references/review-and-updates.md": "9fbefe2783d0bc1bc328af0fd8f8bf34d43cd9aa3c993be1a9ec8dcb46ccb294",
+  "scripts/run_control.py": "e23eca22e46fa61490a3345342751889008805496e7918c2ecaa7c67a5fb305e"
+}

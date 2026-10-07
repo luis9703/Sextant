@@ -1,0 +1,2 @@
+# Foothold
+Initial observation is user-reported, not quantified here. “Make a small tool” spans prototype, personal automation, durable shared service, and safety-critical software; these differ in reliability, security, maintenance and accountability. “Nonprogrammer” is not a stable skill category. Do not equate code generation with tested deployment, nor access with organizational adoption. No prevalence or productivity rate is assumed.

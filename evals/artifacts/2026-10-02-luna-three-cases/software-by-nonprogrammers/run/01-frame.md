@@ -1,0 +1,3 @@
+# Frame
+Seed: “/sextant 我看到越来越多不懂编程的人也能借助 AI 做出自己的小工具。如果这种能力继续发展，未来十年软件、工作分工和公司的形态会变成什么样？请展开不同的未来。”
+Profile: deep (default; user did not ask for brevity). Horizon: ten years from cutoff 2026-10-02, interpreted as roughly 2036, without endpoint probability. Region: broad/global, with institutional variation explicitly relevant. Focus: individuals making small tools with AI and consequences for software, division of labor, firms. Resources: bounded ~15-minute work window for first six phases and neutral review packet. Current factual premises must be sourced; scenario claims conditional. Token telemetry unavailable => unknown. Fresh reviewer reserved for user to launch separately; stop after pathways and neutral packet.

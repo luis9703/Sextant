@@ -1,0 +1,6 @@
+# Minimal foothold
+
+- Supported current premise: Apple documents RoomPlan as using the camera and LiDAR Scanner on supported iPhone and iPad models to create a 3D room floor plan with dimensions and recognized furniture/features, exportable as USD/USDZ. It can combine multiple room scans into a structure. Source: [Apple RoomPlan overview](https://developer.apple.com/augmented-reality/roomplan/); [Apple: scanning multiple rooms](https://developer.apple.com/documentation/roomplan/scanning-the-rooms-of-a-single-structure).
+- Qualification: this confirms a concrete capability on supported hardware and a developer framework. It does not establish that every phone can do it, that consumer capture is consistently accurate, or that broad adoption has occurred. User's statement is treated as an observation about the present, then narrowed to the documented example.
+- Units/ambiguity: “3D model” may mean a room/floor-plan representation with recognized surfaces and objects, or a detailed photorealistic reconstruction. The cited capability supports the former; it does not establish the latter.
+- Not checked: comparative device prices, scan error rates, adoption, privacy practices, interoperability in deployed consumer products, or industry economics.

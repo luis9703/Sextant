@@ -1,0 +1,14 @@
+# 03 Diverge — initial candidates before broad research
+
+These are exploratory mechanisms, not forecasts. They deliberately vary the location of trust, resources, and coordination.
+
+1. **Nearby chosen kin:** A few friends keep separate private homes but choose a walkable radius, recurring shared meals, emergency contacts, and mutual-aid agreements. Privacy and proximity reinforce each other; the weak point is life-stage divergence, moving, and uneven care labor.
+2. **Shared infrastructure, private doors:** Housing is reorganized around small private units plus a common kitchen, workshop, garden, guest room, or care room. Repeated low-stakes encounters can turn neighbors into reliable companions. Governance disputes, affordability, and exclusion can undo the bond.
+3. **Family without co-residence:** Adult children, siblings, friends, and elders retain separate households but coordinate visits, errands, money, and care across distance. The household shrinks while the family network remains consequential. Distance and unequal expectations remain bottlenecks.
+4. **Care as a local service layer:** Property managers, community organizations, care providers, and public services take on specific routine and emergency tasks. People buy or access dependable help without pretending every provider is intimate. Failure mode: fragmented contracts, cost barriers, and weak accountability.
+5. **Reciprocity ledger / mutual-aid circle:** A group tracks favors, availability, skills, and backup contacts to make help less awkward to request. It may start as a tool but settle into a local norm. Quantifying care could also create scorekeeping, privacy risks, or a false promise of equal exchange.
+6. **Deliberate solitude with a narrow safety net:** Some people want solitude as a positive identity and maintain only a few chosen ties plus opt-in check-ins. Their desired future is not a larger household or more social contact; institutions need to distinguish this from unwanted isolation.
+7. **Unequal / brittle branch:** Independent living may be affordable and socially rich for some, while others face rent pressure, insecure work, disability, or weak kin ties and cycle among roommates, family, and temporary housing. “Choice” language can obscure constrained independence; low-cost forms may be crowded or unsafe.
+8. **Human companionship partly mediated by machines:** Household assistants could lower friction in reminders, coordination, or mundane conversation, changing who notices a missed check-in. This only helps if privacy, reliability, and human escalation work; an interface cannot itself supply reciprocal obligation or physical care.
+
+Breadth check: candidates touch assumptions about marriage/co-residence, identity and solitude, housing form, distance, market/public coordination, quantified reciprocity, uneven resources, and automation. They are not polished stories and no candidate is ranked.

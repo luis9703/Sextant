@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-02T12:40:42.189462+00:00",
+  "profile": "deep",
+  "state_fingerprint": "79a9a0381f1d79f9ed148e5a87a4f5f1a6e5652097f17533c5be3f56a7c491d5",
+  "structural_status": "pass",
+  "recorded_phases": 9,
+  "missing_phases": [],
+  "partial_phases": [],
+  "artifact_errors": [],
+  "development_work": {
+    "required_kinds": [
+      "evolution",
+      "contrast"
+    ],
+    "missing_kinds": [],
+    "pending_ids": [],
+    "completed_ids": [
+      "live-object-evolution",
+      "actor-contrast",
+      "decision-evolution",
+      "decision-contrast",
+      "approved-source-correction"
+    ],
+    "quality": "not established by the queue"
+  },
+  "token_target": [
+    50000,
+    100000
+  ],
+  "measured_token_usage": null,
+  "usage_status": "unknown; consult host telemetry separately",
+  "semantic_status": "not established by this script",
+  "scope": "Checks recorded order and artifact integrity; not source truth, actual isolation, creativity, or model compliance outside this helper."
+}

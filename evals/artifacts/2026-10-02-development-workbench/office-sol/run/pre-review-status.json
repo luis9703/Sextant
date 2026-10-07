@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-02T12:22:35.501038+00:00",
+  "profile": "deep",
+  "state_fingerprint": "58b48491b8e2c93d6f8784ccc408ae26e9a0207e5bc156627bdb2561292c1e72",
+  "structural_status": "incomplete_or_invalid",
+  "recorded_phases": 6,
+  "missing_phases": [
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "partial_phases": [],
+  "artifact_errors": [],
+  "development_work": {
+    "required_kinds": [
+      "evolution",
+      "contrast"
+    ],
+    "missing_kinds": [],
+    "pending_ids": [],
+    "completed_ids": [
+      "recipient-e1",
+      "microtools-e1",
+      "plan-c1",
+      "refusal-e2",
+      "capture-c2"
+    ],
+    "quality": "not established by the queue"
+  },
+  "token_target": [
+    50000,
+    100000
+  ],
+  "measured_token_usage": null,
+  "usage_status": "unknown; consult host telemetry separately",
+  "semantic_status": "not established by this script",
+  "scope": "Checks recorded order and artifact integrity; not source truth, actual isolation, creativity, or model compliance outside this helper."
+}

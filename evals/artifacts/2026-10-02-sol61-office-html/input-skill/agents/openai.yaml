@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sextant"
+  short_description: "Explore plausible futures from present-day signals"
+  default_prompt: "Use $sextant to explore how this phenomenon could evolve into different future ways of living."

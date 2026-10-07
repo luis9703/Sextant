@@ -1,0 +1,150 @@
+{
+  "contract_version": "0.2.0-alpha.3",
+  "created_at": "2026-10-02T05:33:05.777952+00:00",
+  "topic": "假如独居与非婚稳定陪伴、互助继续发展，十五年后的家庭、社区与日常生活可能如何变化？",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:33:15.599042+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "94d5aa3e11edb4f1b9f1f6dc8505edcc92ecefa8448cbe62eb2e324946aa7cf7",
+          "bytes": 1217
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:33:58.270590+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "8e90a9f51e6b38289de3132ebd1bf37cf12287730ee730cf0c7cdfbc5ad0db31",
+          "bytes": 2447
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:33:58.365223+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "1ff4c4ef9bfec67b2f29dd1217a39fc99ac199900e3e3c675a5af915dcc064bf",
+          "bytes": 1841
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:35:07.413507+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "ca858acdd836b4014649f8cbf59d82a2cab09029f7de06e8dcdc7abb49401e35",
+          "bytes": 6077
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:35:07.464676+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "4f82f886ab98876e526ce873f9270a8e0b73fe9e86b1c5ab2a2234c11b06a719",
+          "bytes": 2758
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:35:56.817196+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "0457333477e6ef8b375b9290f558431335fa793ce4b626226a740d0737e115d4",
+          "bytes": 8436
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:39:41.937596+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "neutral-review-packet.md",
+          "sha256": "d49d361f2f6b54f017c84c8fa508d3a9c71a5c78877cc73ade6bb31c105aecde",
+          "bytes": 6291
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "1c2a8a8e8a2885f369361584ad179c90dda3b8e9bd9fffec3ece51dcd387d5b5",
+          "bytes": 10985
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T05:43:17.831340+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "8510f96f4f1ed00f63f4b88e5f65db22d00264df3fdf52b8210e9266c8bf786d",
+          "bytes": 6327
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "5ad94dc0ea2a0035c5db1ba33836033df329c59077f6abc266507cd05e975404",
+        "bytes": 10065
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T05:43:23.762902+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "5ad94dc0ea2a0035c5db1ba33836033df329c59077f6abc266507cd05e975404",
+          "bytes": 10065
+        }
+      ]
+    }
+  ]
+}

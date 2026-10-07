@@ -1,0 +1,150 @@
+{
+  "contract_version": "0.2.0-alpha.5",
+  "created_at": "2026-10-02T06:44:48.994912+00:00",
+  "topic": "AI大模型及相关工具强大后Office、WPS是否仍有市场需求，HTML传播呈现的影响",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T06:45:57.340789+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "2a50585fa7897d092df463e6f37db2146edafdb8a6fc97794e436a8cebd39466",
+          "bytes": 1233
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T06:45:57.377434+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "c8a054645789d0f3cfb45fd9e863be2a4a694f46074ceae31c61cb72b9709d62",
+          "bytes": 1104
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T06:45:57.413472+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "c3168c50e762cf39d72dd2e5fde70ef5d7ed2e34e90ad22eb9550f3356e30a2b",
+          "bytes": 1618
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T06:47:46.750190+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "9c3eaf4801abf1e41744a6f29737ba51a12f2a3a620a780ddb0c09405e618bca",
+          "bytes": 2987
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T06:47:46.785948+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "9fd248e16144573219273e50e088c399c73b3573d4c193b8401bf30f53fe6fe9",
+          "bytes": 2105
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T06:50:17.243253+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "e1b1a3c07029687fa9c1690b2331d10dcf837b45125f9947f72363c773c35f67",
+          "bytes": 10029
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T06:59:41.317134+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "07-neutral-review-packet.md",
+          "sha256": "3d64b1258bd9f37c76858cc8d128d49b8ca1ab8ccb206f300461c7acfcbf6579",
+          "bytes": 13363
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "b33a0c40a70ab6c0701ae41aa937131135388a1da0eadcf2c3e90e98602ad08f",
+          "bytes": 16931
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T07:04:25.953812+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "0a1e0cb71027b4ccd903545af6c91e8e0367a9e57363398a75a10f344f425595",
+          "bytes": 5085
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "775b3525e2090f4d666d9868218ec73ec6d48e35b9114d19cc62ee768be2c83c",
+        "bytes": 13214
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T07:04:37.416856+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "775b3525e2090f4d666d9868218ec73ec6d48e35b9114d19cc62ee768be2c83c",
+          "bytes": 13214
+        }
+      ]
+    }
+  ]
+}

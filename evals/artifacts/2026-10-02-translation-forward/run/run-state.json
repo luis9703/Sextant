@@ -1,0 +1,145 @@
+{
+  "contract_version": "0.2.0-alpha.2",
+  "created_at": "2026-10-02T04:40:10.121298+00:00",
+  "topic": "如果未来可以用中文和世界各地的人直接交流，跨国协作、语言学习和人的关系会变成什么样？想象未来十年。",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T04:40:10.222207+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "2fe6b4ad3938a9236b83c6c1e18119652bd3dea4765be58471542a9a1922d7e9",
+          "bytes": 1637
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T04:40:56.938117+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "b9a7886268a801a00d6c28574a3403e31e83d9b934c7c8cedbd4505c45d514a3",
+          "bytes": 1606
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T04:40:56.994213+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "5f350439a9fff71c886bd42eed490b94e39db296694d0356b96cae0b0540fb6e",
+          "bytes": 2636
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T04:42:54.073236+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "4d3c6de623b79913ee201b1016274117bc1aba6aab1b2af800fd5918eaa8c243",
+          "bytes": 6638
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T04:42:54.114567+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "d6d3b08df728d08200f0e9e57912bfffc7ef150641151f17a7960c526fb2f34d",
+          "bytes": 3504
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T04:45:04.166025+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "3b463aace367fbc29a57bad2a8af48cc242815ed401260453a298e06ec376519",
+          "bytes": 20338
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T04:49:33.359661+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "07-neutral-review-packet.md",
+          "sha256": "64ef63f1304308b587859d2ab11769fbdda3ef95d1d4a87daf393beaf2b449dd",
+          "bytes": 25837
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "02ebb3c37072e48ef7d49a739cf03b672edbbfbf14a158f08a7d33672ac76ca7",
+          "bytes": 12297
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T04:52:15.710122+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "5f208c90d0a402cd1aa52542e63d4a7f10a1244bf744df1d3ee1320858321a80",
+          "bytes": 6913
+        }
+      ]
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T04:52:33.696284+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "9e8c0130fee6b16a710d20e6ac25367871b1dd2b513c1e21388197f5edf9e9c7",
+          "bytes": 30263
+        }
+      ]
+    }
+  ]
+}

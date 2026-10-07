@@ -1,0 +1,150 @@
+{
+  "contract_version": "0.2.0-alpha.4",
+  "created_at": "2026-10-02T05:51:55.444215+00:00",
+  "topic": "未来十五年中国城市独居、非婚陪伴与互助形态的条件性想象",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T05:52:10.566083+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "6410bf7a6fc781a48fe9c0e833222b8ab7bc2c1985510171e681ca3d75744481",
+          "bytes": 1656
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T05:52:45.098711+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "37f604f2ff852647533e54a36fd32f676a3b48d9003b92a14db9dc695e482de4",
+          "bytes": 2262
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T05:53:01.355528+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "15022f7d591b9190e2c341e78dda85031054b7a407c13b7c952d04168619d657",
+          "bytes": 2930
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T05:53:51.487665+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "c41116c245b8efeca73c3344280222f06358c0624d165a236cad021b3b51a8e4",
+          "bytes": 6430
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T05:54:16.997200+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "0f92ab457975ec405c299fb3489f6c2c2a2bee9673ebecd5189feb8eae68958e",
+          "bytes": 2869
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T05:54:58.002772+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "41f40a23b1c9194f12f75baed11e3725b2c1177d57c35f36c73031e44b323773",
+          "bytes": 10030
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T05:59:39.898672+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "review-packet.md",
+          "sha256": "0b535d1f3a56d623c34b1a821ac78f7d1f9d98f56447430fac243eaa6ed15783",
+          "bytes": 7122
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "f78db173ffcbbe4faa216b104dbe1d46bd5170790c765428aa26d48213f8839b",
+          "bytes": 8615
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T06:04:44.911620+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "7f31c62f1902f8ee5cee75fd5fef10101c0c813ab9564b1041ffea21e018db1f",
+          "bytes": 6245
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "3d8fc2d23c992496925e522758a1d3a38125ab28388a4bb6d7ab6c1bb73eee93",
+        "bytes": 7996
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T06:04:45.098956+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "3d8fc2d23c992496925e522758a1d3a38125ab28388a4bb6d7ab6c1bb73eee93",
+          "bytes": 7996
+        }
+      ]
+    }
+  ]
+}

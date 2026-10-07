@@ -1,0 +1,443 @@
+{
+  "contract_version": "0.2.0-alpha.6",
+  "created_at": "2026-10-02T12:00:09.547237+00:00",
+  "topic": "AI大模型及工具强大后，Office、WPS还有市场需求吗，尤其在HTML信息呈现流行的背景下？",
+  "profile": "deep",
+  "token_target": [
+    50000,
+    100000
+  ],
+  "phases": [
+    "frame",
+    "foothold",
+    "diverge",
+    "research",
+    "recombine",
+    "pathways",
+    "review",
+    "reconcile",
+    "deliver"
+  ],
+  "receipts": [
+    {
+      "phase": "frame",
+      "recorded_at": "2026-10-02T12:01:27.173232+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "01-frame.md",
+          "sha256": "e7286c50f3a703c8a672f742ea1776910512e7536d5599fe19cb9c7b98e59bc2",
+          "bytes": 1640
+        }
+      ]
+    },
+    {
+      "phase": "foothold",
+      "recorded_at": "2026-10-02T12:01:27.271650+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "02-foothold.md",
+          "sha256": "9a72892d9a7f855972a7372f6e3ff12f293bcccd77a88c1b77a684fd7f28130a",
+          "bytes": 1650
+        }
+      ]
+    },
+    {
+      "phase": "diverge",
+      "recorded_at": "2026-10-02T12:01:27.371131+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "03-diverge.md",
+          "sha256": "e011ba198f48cbcb30bc22ed56104056370b435bc11da4c328b56698776ad985",
+          "bytes": 3330
+        }
+      ]
+    },
+    {
+      "phase": "research",
+      "recorded_at": "2026-10-02T12:08:39.799875+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "04-research.md",
+          "sha256": "a6f2d7286cdf4074a1a564cf532a1934a955e96bc989714806370fafd2afc133",
+          "bytes": 8314
+        }
+      ]
+    },
+    {
+      "phase": "recombine",
+      "recorded_at": "2026-10-02T12:10:03.954095+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "feaeb271ce34b76d6fb520216e0b01c0c600374930382631d897141c4d4e7fc8",
+          "bytes": 6495
+        }
+      ]
+    },
+    {
+      "phase": "pathways",
+      "recorded_at": "2026-10-02T12:19:40.016329+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "06-pathways.md",
+          "sha256": "469d32ee31e255f8913023e3303f854cb8a46a025a8f0a3347e888906cf462e0",
+          "bytes": 14886
+        }
+      ]
+    },
+    {
+      "phase": "review",
+      "recorded_at": "2026-10-02T12:28:38.238267+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "neutral-review-packet.md",
+          "sha256": "553af318d32eae94738077c074eca48a691439ba8fe273a40cde43be5558c621",
+          "bytes": 17260
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "b522533a72a7b8bb4a6611d296c312c0f59a12d4c81178c57aa370b652f70629",
+          "bytes": 13956
+        }
+      ]
+    },
+    {
+      "phase": "reconcile",
+      "recorded_at": "2026-10-02T12:40:36.118021+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "08-reconcile.md",
+          "sha256": "06df4bb1a7d2f06a4538430015f0bd0da941a778e5f02381a7875373ad8bebbd",
+          "bytes": 8025
+        }
+      ],
+      "report_snapshot": {
+        "path": "report.md",
+        "sha256": "32fbd5da6262c47a7924ed0084a3756c6b8e214cce835008438d8f3c85c040b7",
+        "bytes": 22936
+      }
+    },
+    {
+      "phase": "deliver",
+      "recorded_at": "2026-10-02T12:40:36.221665+00:00",
+      "status": "done",
+      "reason": "",
+      "artifacts": [
+        {
+          "path": "report.md",
+          "sha256": "32fbd5da6262c47a7924ed0084a3756c6b8e214cce835008438d8f3c85c040b7",
+          "bytes": 22936
+        }
+      ]
+    }
+  ],
+  "work_required": [
+    "evolution",
+    "contrast"
+  ],
+  "work": [
+    {
+      "id": "recipient-e1",
+      "kind": "evolution",
+      "question": "在接收方可重呈现同一语义资料的条件下，一次经营计划协商怎样改变解释权、责任、身份，并在重复协商后产生新冲突或制度？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:10:20.702148+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "feaeb271ce34b76d6fb520216e0b01c0c600374930382631d897141c4d4e7fc8",
+          "bytes": 6495
+        },
+        {
+          "path": "04-research.md",
+          "sha256": "a6f2d7286cdf4074a1a564cf532a1934a955e96bc989714806370fafd2afc133",
+          "bytes": 8314
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:11:32.932015+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/recipient-e1.md",
+              "sha256": "615abf37c65cf1f3beb6576298633efebce00a7aa3f978ac9055678b1a293111",
+              "bytes": 5183
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microtools-e1",
+      "kind": "evolution",
+      "question": "在低成本、可退出且有状态版本的微工具条件下，家庭和小店怎样从一次性分享发展出新的参与、维护与交换关系，失败会通向怎样的不同生活？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:10:20.800572+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "feaeb271ce34b76d6fb520216e0b01c0c600374930382631d897141c4d4e7fc8",
+          "bytes": 6495
+        },
+        {
+          "path": "04-research.md",
+          "sha256": "a6f2d7286cdf4074a1a564cf532a1934a955e96bc989714806370fafd2afc133",
+          "bytes": 8314
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:12:49.014904+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/microtools-e1.md",
+              "sha256": "8fa2a68aee533dbc910af948725d18bd940bc9da571b9b02f54186b9e7f85319",
+              "bytes": 5258
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plan-c1",
+      "kind": "contrast",
+      "question": "保持向合作方提出可共同修改的经营计划这一目标，个人、小企业和复杂组织分别为何选择套件、AI网页、自有工具或不交付，谁使用、决定、付费和担责，什么条件翻转选择？",
+      "priority": 1,
+      "after": [],
+      "created_at": "2026-10-02T12:10:20.898266+00:00",
+      "inputs": [
+        {
+          "path": "05-recombine.md",
+          "sha256": "feaeb271ce34b76d6fb520216e0b01c0c600374930382631d897141c4d4e7fc8",
+          "bytes": 6495
+        },
+        {
+          "path": "04-research.md",
+          "sha256": "a6f2d7286cdf4074a1a564cf532a1934a955e96bc989714806370fafd2afc133",
+          "bytes": 8314
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:14:29.631386+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/plan-c1.md",
+              "sha256": "8b9d4803d1172623b59379c46834cb85619b973b4d158a41c53b2a8e42a174c2",
+              "bytes": 6676
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "refusal-e2",
+      "kind": "evolution",
+      "question": "反复个性化交付/微工具维护造成负担后，一支团队如何形成少交付或无交付的新习惯，普通事件及反馈怎样让办公需求收缩或反弹？",
+      "priority": 1,
+      "after": [
+        "recipient-e1"
+      ],
+      "created_at": "2026-10-02T12:14:29.730413+00:00",
+      "inputs": [
+        {
+          "path": "work/recipient-e1.md",
+          "sha256": "615abf37c65cf1f3beb6576298633efebce00a7aa3f978ac9055678b1a293111",
+          "bytes": 5183
+        },
+        {
+          "path": "work/microtools-e1.md",
+          "sha256": "8fa2a68aee533dbc910af948725d18bd940bc9da571b9b02f54186b9e7f85319",
+          "bytes": 5258
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:15:39.655380+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/refusal-e2.md",
+              "sha256": "e0ca102c37cf31a3e3d9702c6f7ad889094ed81d638e1adfcd2ee3f9f6363c4c",
+              "bytes": 4819
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "capture-c2",
+      "kind": "contrast",
+      "question": "保持同一个可持续共同计划服务不变，Microsoft365、WPS、AI平台、垂直系统和自助生态在何种明确依赖下捕获支付，改变接口开放/接收权/维护安排会怎样翻转？",
+      "priority": 1,
+      "after": [
+        "plan-c1"
+      ],
+      "created_at": "2026-10-02T12:14:29.830811+00:00",
+      "inputs": [
+        {
+          "path": "work/plan-c1.md",
+          "sha256": "8b9d4803d1172623b59379c46834cb85619b973b4d158a41c53b2a8e42a174c2",
+          "bytes": 6676
+        },
+        {
+          "path": "work/microtools-e1.md",
+          "sha256": "8fa2a68aee533dbc910af948725d18bd940bc9da571b9b02f54186b9e7f85319",
+          "bytes": 5258
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:16:55.363226+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/capture-c2.md",
+              "sha256": "88768e5920ab0218239aab07f7e81bdee6c39db73264b49024e756b1f665bfa9",
+              "bytes": 5402
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review-b-e3",
+      "kind": "evolution",
+      "question": "固定许可和基本语义一致，隐藏评分拒绝一次小供应商计划后，导出/解释要求及下一轮交易怎样在退出成本和履约失败中改变规则、关系、顺从与付款？",
+      "priority": 1,
+      "after": [
+        "recipient-e1"
+      ],
+      "created_at": "2026-10-02T12:29:26.882721+00:00",
+      "inputs": [
+        {
+          "path": "work/recipient-e1.md",
+          "sha256": "615abf37c65cf1f3beb6576298633efebce00a7aa3f978ac9055678b1a293111",
+          "bytes": 5183
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "b522533a72a7b8bb4a6611d296c312c0f59a12d4c81178c57aa370b652f70629",
+          "bytes": 13956
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:31:39.139182+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/review-b-e3.md",
+              "sha256": "1a1353445d09f14a34bdf07663e4a36b23aef21aed357fe732bb988b6c17f912",
+              "bytes": 4911
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review-a-e3",
+      "kind": "evolution",
+      "question": "前台迁移后台复用成功后，模型维护者离任和一个新业务例外如何改变接手者检查、恢复、拒绝助手的行动及下一轮知识接力，原编辑器/独立引擎/维护服务谁有具体需求？",
+      "priority": 2,
+      "after": [
+        "capture-c2"
+      ],
+      "created_at": "2026-10-02T12:29:26.984354+00:00",
+      "inputs": [
+        {
+          "path": "work/capture-c2.md",
+          "sha256": "88768e5920ab0218239aab07f7e81bdee6c39db73264b49024e756b1f665bfa9",
+          "bytes": 5402
+        },
+        {
+          "path": "07-review.md",
+          "sha256": "b522533a72a7b8bb4a6611d296c312c0f59a12d4c81178c57aa370b652f70629",
+          "bytes": 13956
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:34:23.188072+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/review-a-e3.md",
+              "sha256": "530ef757f4aba30199bfda5d9cd10f182bcad5a93dad842575d9502018bce6e1",
+              "bytes": 4971
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review-b-c3",
+      "kind": "contrast",
+      "question": "固定同一共同计划目标与可行技术，分别只改变质询权或退出成本，平等伙伴/强买方中的供应方、买方、履约者选择怎样翻转？另在固定小店服务费用和任务频率下单改恢复责任归属，说明原单变量比较和中国限定负载的实际接口边界。",
+      "priority": 1,
+      "after": [
+        "review-b-e3"
+      ],
+      "created_at": "2026-10-02T12:31:39.240882+00:00",
+      "inputs": [
+        {
+          "path": "work/review-b-e3.md",
+          "sha256": "1a1353445d09f14a34bdf07663e4a36b23aef21aed357fe732bb988b6c17f912",
+          "bytes": 4911
+        },
+        {
+          "path": "work/plan-c1.md",
+          "sha256": "8b9d4803d1172623b59379c46834cb85619b973b4d158a41c53b2a8e42a174c2",
+          "bytes": 6676
+        },
+        {
+          "path": "research-review-addendum.md",
+          "sha256": "174d76a9c5b28a3167627d36da0297b87e5ce61ca76ac1d7222d12dc2e167d3b",
+          "bytes": 2613
+        }
+      ],
+      "results": [
+        {
+          "recorded_at": "2026-10-02T12:33:04.405726+00:00",
+          "status": "done",
+          "reason": "",
+          "artifacts": [
+            {
+              "path": "work/review-b-c3.md",
+              "sha256": "0773cb9990638e2ced0c148ca2821da6c506a15ee753f4ff9028171ed9f5f80e",
+              "bytes": 6402
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
