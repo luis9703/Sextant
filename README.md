@@ -1,12 +1,16 @@
 # Sextant · 未来路径探索
 
-[English](README.en.md) · [Skill](skills/sextant/SKILL.md) · [完整示例](examples/ai-delegation-2035/report.md) · [发布审查](evals/results/2026-09-09-release-review.md)
+[English](README.en.md) · [Skill](skills/sextant/SKILL.md) · [完整示例](examples/ai-delegation-2035/report.md) · [本轮校准](evals/results/2026-10-02-imagination-priority.md)
 
 **从今天的一个现象，展开有依据、敢于想象、可以修正的未来路径。**
 
 Sextant 是一个开放的 Agent Skill。你提供一种新能力、一篇论文、一种行为变化或一个困惑，它帮助你探索：哪些默认假设可能改变，人会产生什么新的欲望和行为，世界可能沿哪些路径演化，以及接下来观察什么。
 
-当前版本 **0.2.0-alpha.1**。这是可试用的方法原型，尚未证明优于普通模型提问、领域专家或其他前瞻方法，也没有经过长期预测成绩验证。“先知”表达探索愿景；结果保留事实、假设、情景和未知的区别。
+当前版本 **0.2.0-alpha.9**。这是可试用的方法原型，尚未证明优于普通模型提问、领域专家或其他前瞻方法，也没有经过长期预测成绩验证。“先知”表达探索愿景；结果保留事实、假设、情景和未知的区别。
+
+主要价值是发现常规框架容易漏掉的未来：把能力从当前用途里拆出来，寻找意外用途、互补条件和新需求，再推演生活与产业怎样变化。历史资料提供材料和约束，未来假说可以没有先例；当下事实仍需写准，不能把有引用等同于有想象力。
+
+当前实现区分来源支持的事实纠正与审查者建议的机制修补；当前产品可作为起点，其重要属性可以在条件探索里改变。宿主支持独立上下文时，可用[选定输入任务包](skills/sextant/references/independent-exploration.md)分别发展不同机制，再整合。脚本只复制选定材料、保存快照和返回调用参数，不调用模型、判断想象质量或增加完成闸门。[本轮实现与对照记录](evals/results/2026-10-06-exploration-and-review.md)区分已实现行为和实际效果。
 
 **可以这样使用。**
 
@@ -75,7 +79,9 @@ python3 scripts/install_skill.py --to "$HOME/.workbuddy/skills" --host workbuddy
 
 你可以指定时间跨度、地域、关注人群、资料范围与研究预算。未提供时，代理采用明确的合理假设；不清楚的关键范围才需要进一步交流。
 
-完整推演默认写到新的 `sextant-runs/<case-id>/`，保留九阶段材料、`run-state.json` 和面向读者的 `report.md`。阶段检查验证顺序、文件完整性和是否存在未完成阶段；它不证明来源真实、审查确实隔离或想象有价值。旧版示例仍保留旧结构，不伪造新版本回执。详情见[执行约定](skills/sextant/references/execution.md)。
+完整推演默认写到新的 `sextant-runs/<case-id>/`。从自动生成的`00-current.md`读取当前路径综合、报告与历史版本。九阶段材料和`run-state.json`保留原记录，审查前综合可以追加新版本；对账绑定当前综合与报告，并要求每项已登记异议有处置及对应摘录，支持中文标签。检查不证明来源真实、修订充分或想象有价值。旧版记录保持原样，使用匹配版本读取。详情见[执行约定](skills/sextant/references/execution.md)和[本轮实测修订](evals/results/2026-10-05-execution-contract.md)。
+
+**阶段内部可以继续展开。** [演化与比较工作台](skills/sextant/references/development.md)把值得深挖的问题放进可恢复的工作队列：一类先假设关键条件成立，追踪普通事件、他人响应和重复使用如何改变世界；另一类固定一个情境，比较不同人为什么选择、放弃或迁移，以及什么条件会反转选择。商业问题再区分需求、使用、付费与收入归属，非商业问题不强套市场分析。宿主执行实际研究与创造，脚本保存输入、依赖和结果，通过`next`返回可继续的工作。待办未完成时不能登记完整路径或对账；两类都有结果也不代表想象已经足够深入。实际改进见[验证记录](evals/results/2026-10-02-development-workbench.md)。
 
 资源配置见 [depth-profiles.json](skills/sextant/assets/depth-profiles.json)。工程默认目标为 deep 合计 5 万–10 万 Token、extensive 合计 10 万–20 万；尚未通过预算对照证明这些区间最优。可修改配置、把目标设为 null，或给单次运行指定区间。目标不是实耗、硬上限或必须花完的额度。真实输入、输出、缓存和推理用量需要宿主统计，无法取得时记为未知。
 
@@ -83,8 +89,10 @@ python3 scripts/install_skill.py --to "$HOME/.workbuddy/skills" --host workbuddy
 
 ```sh
 python3 -B skills/sextant/scripts/run_control.py init --run sextant-runs/my-case --topic "我的未来问题" --budget-min 50000 --budget-max 100000
-python3 -B skills/sextant/scripts/run_control.py status --run sextant-runs/my-case
+python3 -B skills/sextant/scripts/run_control.py next --run sextant-runs/my-case
 ```
+
+以上命令从仓库根目录执行；安装副本使用该Skill内脚本的实际路径。`next`在实际阶段或工作步骤返回目标、完成标准、当前输入、可打开的参考路径和调用参数；`plan_work`只提示缺少的工作种类与工作台指南，不提前要求综合。预算含义随返回值提供。审查可以保存为忠实的异议摘要，并说明范围；摘要压缩不自动成为未完成，外围未使用线索也不必全部复核。执行状态与未决内容分别记录。早期路径`partial`在工作补齐并由审查后当前综合承接后不再阻塞，原回执仍保留；已登记异议的摘录须显式带编号。见[本轮小范围修订](evals/results/2026-10-05-imagination-workflow-fixes.md)。
 
 更高预算优先支持不同机制的候选、跨领域材料、分支深化和反对意见的处理，而非更长的最终报告。Skill 与回执工具不能替代宿主的强制编排，也不保证所有模型自动执行一致。结果不会自动发布，观察清单也不会自动建立定时监测。
 
