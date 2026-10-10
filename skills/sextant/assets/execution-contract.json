@@ -22,22 +22,22 @@
     },
     "recombine": {
       "goal": "Use new material to change or refine the candidate mechanisms.",
-      "completion": ["Explain changed dependencies or actor responses", "Distinguish refinement from a different route", "Choose consequential open questions for development"],
+      "completion": ["Explain changed dependencies or actor responses", "Distinguish refinement from a different route", "Keep a candidate ledger: each initial candidate and returned exploration direction with its quoted core and state (developed, merged, transformed, or set aside with a reason)", "Choose consequential open questions for development"],
       "references": ["references/imagination.md", "references/development.md"]
     },
     "pathways": {
       "goal": "Save a pre-review pathway draft that integrates development results.",
-      "completion": ["Integrate performed evolution and contrast work without repeating it", "Explain transitions, responses, feedback and branch-specific conditions", "Label this synthesis as pre-review; later corrections use a new revision"],
-      "references": ["references/development.md", "references/execution.md"]
+      "completion": ["Integrate performed evolution and contrast work without repeating it", "Explain transitions, responses, feedback and branch-specific conditions", "Carry each developed or merged ledger core as a concrete sentence, scene or branch, or change its row to set aside with the reason", "Label this synthesis as pre-review; later corrections use a new revision"],
+      "references": ["references/development.md", "references/imagination.md", "references/execution.md"]
     },
     "review": {
       "goal": "Perform a scoped grounding and creative challenge; judge the reviewer's proposed repairs as candidate mechanisms.",
-      "completion": ["Give the reviewer neutral candidates and evidence", "Save a full reply or an honestly labelled issue summary, stating context and coverage", "Distinguish supported premise corrections from proposed causal repairs; register material issues and park unused peripheral leads"],
+      "completion": ["Give the reviewer neutral candidates, evidence and the ledger's set-aside candidates with their stated reasons", "Save a full reply or an honestly labelled issue summary, stating context and coverage", "Distinguish supported premise corrections from proposed causal repairs; register material issues and park unused peripheral leads"],
       "references": ["references/review-and-updates.md"]
     },
     "reconcile": {
       "goal": "Finish the current pathway version and report, then account for every registered issue.",
-      "completion": ["Update or explicitly confirm the pathway synthesis after review and any follow-up work", "Use a disposition and actual excerpt for each relevant target of a material issue", "Distinguish unresolved conditions and unused leads from unperformed work"],
+      "completion": ["Update or explicitly confirm the pathway synthesis after review and any follow-up work", "Sweep the finished report's statements about the present and past for source, data period and edition, measure and read status; rewrite or remove unsupported ones before binding", "Read the candidate ledger against the finished files; restore a lost core or record its state with a reason", "Use a disposition and actual excerpt for each relevant target of a material issue", "Distinguish unresolved conditions and unused leads from unperformed work"],
       "references": ["references/review-and-updates.md", "references/execution.md"]
     },
     "deliver": {

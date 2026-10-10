@@ -420,3 +420,31 @@ class ExecutionContractTests(unittest.TestCase):
         self.ok("record", "--phase", "reconcile", "--artifact", "notes.md", "--report", "combined.md")
         self.ok("record", "--phase", "deliver", "--artifact", "combined.md")
         self.assertEqual(self.ok("verify")["structural_status"], "pass")
+
+    def test_claim_sweep_and_ledger_tables_travel_with_reconciliation(self):
+        # The sweep and ledger check are plain tables. Disposition markers stay
+        # reserved for registered review issues, so a ledger row cannot use one.
+        self.review(no_issues=False)
+        self.issue("F1")
+        self.revised()
+        self.file("report.md", "Availability retained as a condition\nCapture retained as a condition\n")
+        self.file("notes.md", self.two_dispositions().split("[处置 F2:")[0])
+        self.file("ledger-markers.md", "[处置 C8: 保留]\nSynthetic set-aside core.\n")
+        before = (self.run / "run-state.json").read_bytes()
+        rejected = call("record", "--run", str(self.run), "--phase", "reconcile", "--artifact", "notes.md",
+                        "--artifact", "ledger-markers.md", "--report", "report.md")
+        self.assertEqual(rejected.returncode, 2)
+        self.assertIn("unknown or duplicate issue id: C8", rejected.stderr)
+        self.assertEqual(before, (self.run / "run-state.json").read_bytes())
+        self.file("claim-sweep.md", (
+            "| Line | Statement | Source | Period and edition | What it measures | Read status | Action |\n"
+            "| --- | --- | --- | --- | --- | --- | --- |\n"
+            "| report.md#L1 | Synthetic availability | synthetic source | synthetic period | synthetic measure | full text | kept |\n"
+            "\n| Candidate | Quoted core | State | Location |\n| --- | --- | --- | --- |\n"
+            "| C8 | Synthetic set-aside core | set aside: synthetic reason | none |\n"))
+        self.ok("record", "--phase", "reconcile", "--artifact", "notes.md", "--artifact", "claim-sweep.md", "--report", "report.md")
+        self.ok("record", "--phase", "deliver", "--artifact", "report.md")
+        checked = self.ok("verify")
+        self.assertEqual(checked["structural_status"], "pass")
+        self.assertEqual(checked["issue_coverage"]["details_in"], ["notes.md", "claim-sweep.md"])
+        self.assertEqual(checked["issue_coverage"]["dispositions"], [{"id": "F1", "action": "revise"}])

@@ -60,15 +60,17 @@ Material issues affect both pathways and report by default; narrow targets expli
 
 ## Reconcile issue by issue
 
-Complete the current synthesis and reader-facing report first. Re-open saved files with line numbers. In the disposition note, associate every registered id with an action, rationale and literal excerpts for its affected targets. See the bilingual marker syntax in [review-and-updates.md](review-and-updates.md). revise, keep, drop and unresolved need target excerpts; not_used needs a reason but no invented report passage. Unresolved future conditions can be addressed honestly without becoming unperformed work.
+Complete the current synthesis and reader-facing report first. Sweep the report's present-day claims and read the candidate ledger against the finished files as described in [review-and-updates.md](review-and-updates.md); make any resulting edits before collecting locators. Re-open saved files with line numbers. In the disposition note, associate every registered id with an action, rationale and literal excerpts for its affected targets. See the bilingual marker syntax in [review-and-updates.md](review-and-updates.md). revise, keep, drop and unresolved need target excerpts; not_used needs a reason but no invented report passage. Unresolved future conditions can be addressed honestly without becoming unperformed work.
 
 ```sh
-python3 -B skills/sextant/scripts/run_control.py record --run /path/to/case --phase reconcile --artifact 08-reconcile.md --report report.md
+python3 -B skills/sextant/scripts/run_control.py record --run /path/to/case --phase reconcile --artifact 08-reconcile.md --artifact 08-claim-sweep.md --report report.md
 python3 -B skills/sextant/scripts/run_control.py record --run /path/to/case --phase deliver --artifact report.md
 python3 -B skills/sextant/scripts/run_control.py verify --run /path/to/case
 ```
 
 The first current pathway artifact is the default synthesis; --pathways can select another artifact in that current version. The helper binds both synthesis and report, checks all labelled literal positions and requires dispositions for every registered issue. It can reject a missing F2 despite a valid F1 excerpt. It cannot detect an unregistered objection or decide whether the cited passage truly resolves it. Check semantic coverage of the actual review, lead, dependent paths and observations before declaring completion.
+
+The claim sweep and ledger check are plain tables; here they travel in 08-claim-sweep.md with the same receipt. Only disposition and excerpt markers are parsed.
 
 Partial reconciliation may retain useful work with a reason. Finished report bytes are delivered unchanged. verify writes verification.json separately; do not edit the bound report to insert a pass message.
 

@@ -26,7 +26,8 @@ When a broad seed has meaningful alternative directions and authorized Agent con
 | --- | --- |
 | The user's original question | Authorship, which model or subagent produced the candidates |
 | Scope, region, and source cutoff | Self-scores, preferred candidates, rankings |
-| Neutral candidate descriptions, in shuffled order with no quality marks | The first-pass candidate list and any generation history |
+| Neutral candidate descriptions, in shuffled order with no quality marks | Which pass or explorer produced each candidate, and other generation history |
+| The ledger's set-aside candidates: one-line core and stated reason, in shuffled order | Whether the authors favored a set-aside, or how it ranked |
 | The explicit assumptions each candidate depends on | Leading phrasing such as "please confirm these paths are sound" |
 | Supporting and conflicting evidence, with links | The expected conclusion |
 | The review request below | Chat context beyond the source list for this run |
@@ -36,11 +37,11 @@ Review request, reusable verbatim:
 > Identify and list, one by one: (1) factual contradictions or premises the sources do not support; (2) missing transitions, resources, actor responses, cultural conditions, or delays; (3) alternative explanations that account for the same phenomenon, or similar cases that failed differently; (4) conditions that can be kept as explicit speculation but not called established; (5) repairs that would strengthen a candidate, or failures that would open another path.
 > Give a basis for each item. Mark anything recalled from memory as unverified. Do not adjust probabilities to make the set pass, and do not remove a candidate for lack of precedent. End with the objections that remain.
 
-Also perform a creative challenge: identify paths prematurely pruned by today's product form, overlooked desires or institutions, and alternative mechanisms that could open a different future. This does not authorize invented factual support.
+Also perform a creative challenge: identify paths prematurely pruned by today's product form, overlooked desires or institutions, and alternative mechanisms that could open a different future. Judge which set-aside candidates deserve revival as conditional paths and what each would need. This does not authorize invented factual support.
 
 Ask the reviewer to distinguish supported premise corrections from proposed causal repairs. The generating session judges both: it may use a sourced fact while rejecting the mechanism proposed around it. When a bridge fails, consider a justified alternative that preserves or transforms the future; do not invent an exclusion to make the scene concrete. Keep and unresolved remain valid dispositions.
 
-**Recovering the result.** Save the actual review as a full reply or faithfully labelled issue summary, declaring context and coverage. Register material objections and park unused peripheral leads. Update the pathway synthesis with a new version, or confirm it unchanged when warranted, then complete and re-open the current synthesis and report. Record issue dispositions and bilingual literal excerpts as described in [review-and-updates.md](../review-and-updates.md). The helper binds both current files; deliver the frozen report and point readers to 00-current.md. Use the actual installed script/reference paths returned by next, not paths relative to an assumed working directory. Earlier cases retain their original records and matching contracts.
+**Recovering the result.** Save the actual review as a full reply or faithfully labelled issue summary, declaring context and coverage. Register material objections and park unused peripheral leads. Update the pathway synthesis with a new version, or confirm it unchanged when warranted, then complete the current synthesis and report. Sweep the report's present-day claims and read the candidate ledger against the finished files, saving both as plain tables. Re-open both files and record issue dispositions and bilingual literal excerpts as described in [review-and-updates.md](../review-and-updates.md). The helper binds both current files; deliver the frozen report and point readers to 00-current.md. Use the actual installed script/reference paths returned by next, not paths relative to an assumed working directory. Earlier cases retain their original records and matching contracts.
 
 **Known hazard.** On Claude Code, a subagent that spawns another subagent can have the result routed to the top-level session instead of its parent, which stalls the wait. Mitigation: always launch the reviewing subagent directly from the orchestrating session. Never spawn a subagent from inside a generating subagent.
 
